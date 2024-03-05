@@ -1,0 +1,182 @@
+<div class="linea_etica">
+    <p class="subtitle">
+        Canal manejado para centralizar los comentarios, denuncias u observaciones de las contrapartes ( Proveedores, Clientes, Colaboradores).
+        <b>Garantizando la confianza, transparencia y confidencialidad</b>
+    </p>
+    <form id="linea_etica" onsubmit="return false;" enctype="multipart/form-data">
+        <input type="hidden" name="formName" value="LE" />
+        <div class="container_field">
+            <p>
+                Datos básicos de la denuncia:
+            </p>
+            <div class="content-field">
+                <div class="input-field">
+                    <select name="tipoDenuncia" id="tipoDenuncia">
+                        <option value="">Tipo de denuncia*</option>
+                        <option value="Abuso de poder">
+                            Abuso de poder
+                        </option>
+                        <option value="Conflicto de interés">
+                            Conflicto de interés
+                        </option>
+                        <option value="Fraude anticorrupciòn">
+                            Fraude anticorrupción
+                        </option>
+                        <option value="Incumplimiento en el còdigo de ético y buen gobierno">
+                            Incumplimiento en el còdigo de ético y buen gobierno
+                        </option>
+                        <option value="Contrataciones entre proveedores ilegales">
+                            Contrataciones entre proveedores ilegales
+                        </option>
+                        <option value="Negociaciones fraudulentas">
+                            Negociaciones fraudulentas
+                        </option>
+                        <option value="Sobornos regalos donanciones">
+                            Sobornos regalos donanciones
+                        </option>
+                        <option value="Acoso Laboral">
+                            Acoso Laboral
+                        </option>
+                        <option value="Empleados ficticios">
+                            Empleados ficticios
+                        </option>
+                        <option value="Otras actuaciones">
+                            Otras actuaciones
+                        </option>
+                    </select>
+                    <em></em>
+                </div>
+            </div>
+            <div class="content-field">
+                <div class="input-field">
+                    <input type="text" name="areaDenuncia" autocomplete="off" />
+                    <label for="areaDenuncia">Área o nombre*</label>
+                    <em></em>
+                </div>
+            </div>
+            <div class="content-field">
+                <div class="input-field">
+                    <input type="text" name="departamento" autocomplete="off" />
+                    <label for="departamento">Departamento</label>
+                </div>
+            </div>
+            <div class="content-field">
+                <div class="input-field">
+                    <input type="text" name="ciudad" autocomplete="off" />
+                    <label for="ciudad">Ciudad</label>
+                </div>
+            </div>
+            <div class="content-field textarea">
+                <div class="input-field">
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                    <label for="descripcion">Descripción de la denuncia*</label>
+                    <em></em>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_field">
+            <p>
+                Personas implicadas en el proceso:
+            </p>
+            <div class="process">
+                <div class="content-field">
+                    <div class="input-field">
+                        <input type="text" name="nombreImplicado" autocomplete="off" />
+                        <label for="nombreImplicado">Nombre*</label>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="content-field">
+                    <div class="input-field">
+                        <input type="text" name="cargoImplicado" autocomplete="off" />
+                        <label for="cargoImplicado">Cargo*</label>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="content-field">
+                    <div class="input-field">
+                        <input type="date" name="fechaDenuncia" class="not_empty" autocomplete="off" />
+                        <label for="fechaDenuncia">Fecha*</label>
+                        <em></em>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="add_person">
+                Añadir otra persona
+            </a>
+        </div>
+
+        <div class="container_field">
+            <p>
+                Información del denunciante:
+            </p>
+            <div class="content-field">
+                <div class="input-field">
+                    <select name="nombreDenunciante" id="nombreDenunciante">
+                        <option value="">Denunciante*</option>
+                        <option value="Colaborador">
+                            Colaborador
+                        </option>
+                        <option value="Cliente">
+                            Cliente
+                        </option>
+                        <option value="Proveedor">
+                            Proveedor
+                        </option>
+                        <option value="Otro">
+                            Otro
+                        </option>
+                    </select>
+                    <em></em>
+                </div>
+            </div>
+            <div class="content-field">
+                <div class="input-field">
+                    <input type="email" name="emailDenunciante" autocomplete="off" />
+                    <label for="emailDenunciante">Email*</label>
+                </div>
+            </div>
+            <div class="content-field">
+                <div class="input-field">
+                    <input type="tel" name="telefonoDenunciante" autocomplete="off" />
+                    <label for="telefonoDenunciante">Teléfono*</label>
+                    <em></em>
+                </div>
+            </div>
+        </div>
+        <div class="container_field">
+            <p>
+                Soportes del caso
+            </p>
+            <div class="content-field">
+                <p>
+                    Si cuenta con evidencias sobre el reporte realizado, enviélas al correo <a href="mailto:oficialcumplimiento@lagobo.com">oficialcumplimiento@lagobo.com</a> ó adjunte el soporte para el caso.
+                </p>
+            </div>
+            <div class="content-field file_upload">
+                <div class="input-field">
+                    <input type="file" name="file" autocomplete="off" class="not_empty" multiple="true" accept="image/*, .pdf, audio/*, video/*" />
+                    <label for="file">Adjuntar soportes</label>
+                    <em></em>
+                </div>
+            </div>
+            <div class="content-field terms-check">
+                <div class="input-field">
+                    <label id="tdatos">
+                        <input type="checkbox" name="tdatos" id="tdatos" value="true" autocomplete="off" />
+                        <span class="active" for="tdatos">
+                            <a href="https://www.oportunidades.com.co/proteccion-de-datos-personales" target="_blank" title="">Autorizo el tratamiento de mis datos personales</a>
+                        </span>
+                    </label>
+                    <em></em>
+                </div>
+            </div>
+        </div>
+        <div class="content-field button-lagobo">
+            <div class="input-field">
+                <button class="send-form-btn validateData" autocomplete="off">ENVIAR</button>
+            </div>
+        </div>
+    </form>
+</div>

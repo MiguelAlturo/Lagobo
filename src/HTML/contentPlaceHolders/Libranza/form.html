@@ -1,0 +1,152 @@
+<div class="title">
+    <p>
+        ¡DÉJANOS TUS DATOS PARA EMPEZAR LA FINANCIACIÓN!
+    </p>
+</div>
+<form id="form-libranza" onsubmit="return false;">
+    <div class="content-field">
+        <div class="input-field">
+            <input type="text" name="nombre" autocomplete="off" />
+            <label for="nombre">Nombres*</label>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <input type="text" name="apellido" autocomplete="off" />
+            <label for="apellido">Apellidos*</label>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <input type="email" name="email" autocomplete="off" />
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <input type="text" name="documento" autocomplete="off" />
+            <label for="documento">Cédula/Identificación*</label>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <input type="tel" name="celular" autocomplete="off" />
+            <label for="celular">Teléfono celular*</label>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <input type="text" name="ciudad" autocomplete="off" />
+            <label for="ciudad">Ciudad*</label>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <select name="tipoCliente" id="tipoCliente">
+                <option value="">Tipo de cliente</option>
+                <option value='DOCENTE'>DOCENTE</option>
+                <option value='MILITAR'>MILITAR</option>
+                <option value='PENSIONADO'>PENSIONADO</option>
+                <option value='POLICIA'>POLICIA</option>
+            </select>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field">
+        <div class="input-field">
+            <select name="entidad" id="entidad">
+                <option value="">¿A qué entidad perteneces?</option>
+                <option value='ALCALDIA MAYOR DE BOGOTA - DOCENTES'>ALCALDIA MAYOR DE BOGOTA - DOCENTES</option>
+                <option value='GOBERNACION DE CORDOBA - DOCENTES'>GOBERNACION DE CORDOBA - DOCENTES</option>
+                <option value='ALCALDIA DE NEIVA DOCENTES'>ALCALDIA DE NEIVA DOCENTES</option>
+                <option value='GOBERNACION DEL HUILA DOCENTES'>GOBERNACION DEL HUILA DOCENTES</option>
+                <option value='CREMIL'>CREMIL</option>
+                <option value='ACALDIA DE IBAGUE'>ACALDIA DE IBAGUE</option>
+                <option value='ALCALDIA DE MANIZALES'>ALCALDIA DE MANIZALES</option>
+                <option value='AXA COLPATRIA ARL '>AXA COLPATRIA ARL </option>
+                <option value='AXA COLPATRIA RENTA VITALICIA'>AXA COLPATRIA RENTA VITALICIA</option>
+                <option value='BBVA SEGUROS '>BBVA SEGUROS </option>
+                <option value='COLFONDOS'>COLFONDOS</option>
+                <option value='COLPENSIONES'>COLPENSIONES</option>
+                <option value='COLPENSIONES - EMPOS'>COLPENSIONES - EMPOS</option>
+                <option value='FERROCARRILES'>FERROCARRILES</option>
+                <option value='FIDUPREVISORA'>FIDUPREVISORA</option>
+                <option value='FONCEP'>FONCEP</option>
+                <option value='FOPEP'>FOPEP</option>
+                <option value='GLOBAL SEGUROS '>GLOBAL SEGUROS </option>
+                <option value='GOBERNACION DE CALDAS'>GOBERNACION DE CALDAS</option>
+                <option value='GOBERNACION DE CORDOBA '>GOBERNACION DE CORDOBA </option>
+                <option value='GOBERNACION DE RISARALDA'>GOBERNACION DE RISARALDA</option>
+                <option value='MAPFRE'>MAPFRE</option>
+                <option value='PORVENIR'>PORVENIR</option>
+                <option value='POSITIVA SEGUROS'>POSITIVA SEGUROS</option>
+                <option value='PROTECCION'>PROTECCION</option>
+                <option value='SEGUROS ALFA'>SEGUROS ALFA</option>
+                <option value='SEGUROS BOLIVAR ARL'>SEGUROS BOLIVAR ARL</option>
+                <option value='SEGUROS BOLIVAR RENTA VITALICIA'>SEGUROS BOLIVAR RENTA VITALICIA</option>
+                <option value='SEGUROS DE VIDA SURAMERICANA'>SEGUROS DE VIDA SURAMERICANA</option>
+                <option value='SURAMERICANA ARL '>SURAMERICANA ARL </option>
+                <option value='SKANDIA PENSIONES Y CESANTIAS S.A'>SKANDIA PENSIONES Y CESANTIAS S.A</option>
+                <option value='ALCALDIA DE PEREIRA'>ALCALDIA DE PEREIRA</option>
+                <option value='ALCALDIA DE SINCELEJO'>ALCALDIA DE SINCELEJO</option>
+                <option value='ALCALDIA DE VILLAVICENCIO'>ALCALDIA DE VILLAVICENCIO</option>
+                <option value='GOBERNACION DE SUCRE'>GOBERNACION DE SUCRE</option>
+                <option value='GOBERNACION DE TOLIMA'>GOBERNACION DE TOLIMA</option>
+                <option value='GOBERNACION DE QUINDIO'>GOBERNACION DE QUINDIO</option>
+                <option value='ALCALDIA DE NEIVA'>ALCALDIA DE NEIVA</option>
+                <option value='GOBERNACION DEL HUILA'>GOBERNACION DEL HUILA</option>
+                <option value='CASUR'>CASUR</option>
+            </select>
+            <em></em>
+        </div>
+    </div>
+    <div class="content-field slider-container">
+        <div class="monto-container">
+            <p>
+                Monto a financiar
+            </p>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="80000000" step="500000" value="0" class="slider" name="monto" id="monto" />
+            </div>
+            <p class="monto-value">
+
+            </p>
+        </div>
+        <em></em>
+    </div>
+    <div class="content-field terms-check">
+        <div class="input-field">
+            <label id="tyc">
+                <input type="checkbox" name="tyc" id="tyc" value="true" autocomplete="off" />
+                <span class="active" for="tyc">
+                    <a href="https://www.libranzaoportunidades.com/terminos-y-condiciones" target="_blank" title="">Acepto términos y condiciones.</a>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="content-field terms-check">
+        <div class="input-field">
+            <label id="tdatos">
+                <input type="checkbox" name="tdatos" id="tdatos" value="true" autocomplete="off" />
+                <span class="active" for="tdatos">
+                    <a href="https://www.libranzaoportunidades.com/politica-tratamiento-de-datos" target="_blank" title="">Acepto las políticas de tratamiento de datos.</a>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="content-field terms-check">
+        <p>
+            La aprobación del monto y plazo sujetos a políticas de crédito. Déjanos tus datos y un asesor se comunicara contigo para continuar con tu solicitud. Si quieres más información comunícate con nosotros a este WhatsApp <a href="https://api.whatsapp.com/send?phone=573122399959" target="_blank">312 2399959</a>
+        </p>
+    </div>
+    <div class="content-field button-lagobo">
+        <div class="input-field">
+            <button class="send-form-btn validateData" autocomplete="off">ENVIAR</button>
+        </div>
+    </div>
+</form>

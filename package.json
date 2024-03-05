@@ -1,0 +1,60 @@
+{
+    "name": "base-project",
+    "version": "1.0.0",
+    "description": "Proyecto limpio, solo estructura",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --watch --mode development",
+        "prod": "webpack --watch --mode production",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ITGlobers/BASE-PROJECT.git"
+    },
+    "author": "Edwin Obando",
+    "co-author": "Marco Villegas",
+    "maintainers": [
+        "Marco Villegas"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ITGlobers/BASE-PROJECT/issues"
+    },
+    "homepage": "https://github.com/ITGlobers/BASE-PROJECT#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.11.6",
+        "@babel/core": "^7.11.6",
+        "@babel/plugin-transform-runtime": "^7.11.5",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/register": "^7.11.5",
+        "@babel/runtime-corejs3": "^7.11.2",
+        "@types/jquery": "^3.5.3",
+        "@types/slick-carousel": "^1.6.34",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^4.3.0",
+        "cssnano": "^4.1.10",
+        "eslint": "^7.9.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "mini-css-extract-plugin": "^0.11.2",
+        "node-sass": "^4.14.1",
+        "postcss": "^8.0.5",
+        "postcss-loader": "^4.0.2",
+        "postcss-preset-env": "^6.7.0",
+        "prettier": "^2.1.1",
+        "sass-loader": "^10.0.2",
+        "webpack": "^4.46.0",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "qs": "^6.10.3",
+        "sweetalert2": "^10.16.6",
+        "uuid": "^8.3.2"
+    }
+}

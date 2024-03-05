@@ -1,0 +1,564 @@
+<!--
+ * Developed by Brandlive
+ * [brandlivecommerce.com]
+ *
+ * Based on:
+ * - Bootstrap v.3
+ * - VTEX Base Template [Home]
+ -->
+
+<!DOCTYPE html>
+<html
+    lang="es-CO"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+>
+    <head>
+        <title>Lagobo Locales</title>
+        <vtex:metaTags />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/arquivos/favicon.ico" />
+        <vtex:template id="commonStyles" />
+        <vtex:template id="OP-CommonStyles" />
+
+        <!-- Google Maps API -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js?v=1.4.146.641"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLq-9OQYQ6rIhkdkQXkiB2ZldBh5PLK4"></script>
+        <!-- Store Locator - Stores -->
+        <script type="text/javascript" src="/arquivos/locales.min.js"></script>
+        <script type="text/javascript" src="/arquivos/storeLocator.min.js"></script>
+    </head>
+
+    <body id="static-page">
+        <!-- SubTemplate: Header-menu -->
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div class="page">
+            <div class="container">
+                <div id="box-bread-brumb">
+                    <vtex.cmc:breadCrumb />
+                </div>
+                <section id="static-content">
+                    <div class="page-title col-xs-12">
+                        <h2>Nuestras tiendas</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 left">
+                        <div class="block-select">
+                            <h4>Seleccione un departamento</h4>
+                            <select id="prov">
+                                <option value="0">Departamento</option>
+                            </select>
+                            <!-- <select id="loc" disabled="disabled">
+                            <option value="0" disabled="disabled">Seleccionar localidad o barrio</option>
+                        </select> -->
+                        </div>
+                        <div class="locales">
+                            <ul>
+                                <!-- Tienda 1 -->
+                                <div class="item mayorista" data-lat="9.303223" data-lng="-75.392604" data-info="Sucursal 1">
+                                    <div class="number">ALMACEN SINCELEJO II</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN SINCELEJO II</div>
+                                        <div class="address">CL 21 No.21-82</div>
+                                        <div class="place">SINCELEJO - SUCRE</div>
+                                        <div class="more">Tel:(305)2821181</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 2 -->
+                                <div class="item mayorista" data-lat="3.548069" data-lng="-73.710665" data-info="Sucursal 2">
+                                    <div class="number">ALMACEN OPORTUNIDADES GRANADA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES GRANADA</div>
+                                        <div class="address">CR 13 No.22-30</div>
+                                        <div class="place">GRANADA - META</div>
+                                        <div class="more">Tel:(320) 5901900</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 3 -->
+                                <div class="item mayorista" data-lat="4.150792" data-lng="-73.633855" data-info="Sucursal 3">
+                                    <div class="number">ALMACEN OPORTUNIDADES VILLAVICENCIO</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES VILLAVICENCIO</div>
+                                        <div class="address">CR 29 No. 37-16/18</div>
+                                        <div class="place">VILLAVICENCIO - META</div>
+                                        <div class="more">Tel:(308) 6788156</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 4 -->
+                                <div class="item mayorista" data-lat="4.084592" data-lng="-72.955752" data-info="Sucursal 4">
+                                    <div class="number">ALMACEN OPORTUNIDADES PUERTO LOPEZ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES PUERTO LOPEZ</div>
+                                        <div class="address">CL 6 No. 6-36 BRR Gaitán Centro</div>
+                                        <div class="place">PUERTO LOPEZ - META</div>
+                                        <div class="more">Tel:(313) 8701358</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 5 -->
+                                <div class="item mayorista" data-lat="4.983009" data-lng="-75.604152" data-info="Sucursal 5">
+                                    <div class="number">ALMACEN OPORTUNIDADES CHINCHINÁ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN CHINCHINÁ</div>
+                                        <div class="address">CR 8 No. 8-19</div>
+                                        <div class="place">CHINCHINÁ - CALDAS</div>
+                                        <div class="more">Tel:(306)8503315</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 6 -->
+                                <div class="item mayorista" data-lat="4.086529" data-lng="-76.199489" data-info="Sucursal 6">
+                                    <div class="number">ALMACEN OPORTUNIDADES TULUÁ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES TULUÁ</div>
+                                        <div class="address">CL 25 No. 22-60</div>
+                                        <div class="place">TULUÁ - VALLE DEL CAUCA</div>
+                                        <div class="more">Tel:(302) 2245051</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 7-->
+                                <div class="item mayorista" data-lat="4.813951" data-lng="-75.695666" data-info="Sucursal 7">
+                                    <div class="number">ALMACEN OPORTUNIDADES PEREIRA I</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES PEREIRA</div>
+                                        <div class="address">CR 8 No. 20-51</div>
+                                        <div class="place">PEREIRA - RISARALDA</div>
+                                        <div class="more">Tel:(306)3350470–(6)3344985</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 8 -->
+                                <div class="item mayorista" data-lat="4.814061" data-lng="-75.696111" data-info="Sucursal 7">
+                                    <div class="number">ALMACEN OPORTUNIDADES PEREIRA II</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES PEREIRA II</div>
+                                        <div class="address">CR 8 No. 21-18</div>
+                                        <div class="place">PEREIRA - RISARALDA</div>
+                                        <div class="more">Tel:(306)3355949-(6)3343296</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 9 -->
+                                <div class="item mayorista" data-lat="4.534718" data-lng="-75.674117" data-info="Sucursal 9">
+                                    <div class="number">ALMACEN OPORTUNIDADES ARMENIA I</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES ARMENIA I</div>
+                                        <div class="address">CR 17 No. 19-48</div>
+                                        <div class="place">ARMENIA - QUINDÍO</div>
+                                        <div class="more">Tel:(306)7344698</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 10 -->
+                                <div class="item mayorista" data-lat="5.068002" data-lng="-75.516398" data-info="Sucursal 10">
+                                    <div class="number">ALMACEN OPORTUNIDADES MANIZALES</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN MANIZALES</div>
+                                        <div class="address">CR. 22 No. 24-04 Local 101 Ed San Fernando</div>
+                                        <div class="place">MANIZALES - CALDAS</div>
+                                        <div class="more">Tel:(306)8847407</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 11 -->
+                                <div class="item mayorista" data-lat="5.453651" data-lng="-74.662631" data-info="Sucursal 11">
+                                    <div class="number">ALMACEN OPORTUNIDADES LA DORADA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES LA DORADA</div>
+                                        <div class="address">CR. 2 No. 14 – 35/37</div>
+                                        <div class="place">LA DORADA - CALDAS</div>
+                                        <div class="more">Tel: (320) 4752081</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 12 -->
+                                <div class="item mayorista" data-lat="9.230016" data-lng="-74.744118" data-info="Sucursal 22">
+                                    <div class="number">ALMACEN OPORTUNIDADES MAGANGUÉ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES MAGANGUÉ</div>
+                                        <div class="address">Sector Centro CL 11 No.3-11 Calle del Colegio Piso 1</div>
+                                        <div class="place">MAGANGUÉ - BOLIVAR</div>
+                                        <div class="more">Tel: (316) 7440008</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 13 -->
+                                <div class="item mayorista" data-lat="4.610724" data-lng="-72.928052" data-info="Sucursal 13">
+                                    <div class="number">ALMACEN OPORTUNIDADES VILLANUEVA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES VILLANUEVA</div>
+                                        <div class="address">CL 11 No. 10-03</div>
+                                        <div class="place">VILLANUEVA - CASANARE</div>
+                                        <div class="more">Tel:(608)6243060</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 14 -->
+                                <div class="item mayorista" data-lat="4.441166" data-lng="-75.238781" data-info="Sucursal 14">
+                                    <div class="number">ALMACEN OPORTUNIDADES IBAGUÉ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES IBAGUÉ</div>
+                                        <div class="address">CR. 2 No. 12-90 Barrio Centro</div>
+                                        <div class="place">IBAGUÉ - TOLIMA</div>
+                                        <div class="more">Tel:(608) 2629369</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 15 -->
+                                <div class="item mayorista" data-lat="9.302257" data-lng="-75.381978" data-info="Sucursal 15">
+                                    <div class="number">ALMACEN OPORTUNIDADES SINCELEJO I</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES SINCELEJO I</div>
+                                        <div class="address">CL 28 No 25B-365, Guacarí Parque Comercial, LC 02246</div>
+                                        <div class="place">SINCELEJO - SUCRE</div>
+                                        <div class="more">Tel:(605) 2771128</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 16 -->
+                                <div class="item mayorista" data-lat="8.757183" data-lng="-75.885954" data-info="Sucursal 16">
+                                    <div class="number">ALMACEN OPORTUNIDADES MONTERÍA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES MONTERÍA</div>
+                                        <div class="address">CL 32 No. 3-43 CENTRO</div>
+                                        <div class="place">MONTERÍA - CÓRDOBA</div>
+                                        <div class="more">Tel:(605)7895401</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 17 -->
+                                <div class="item mayorista" data-lat="3.986079" data-lng="-73.761399" data-info="Sucursal 17">
+                                    <div class="number">ALMACEN OPORTUNIDADES ACACIAS</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES ACACIAS</div>
+                                        <div class="address">CR 18 No. 13-35 CENTRO</div>
+                                        <div class="place">ACACIAS - META</div>
+                                        <div class="more">Tel:(608)6576853</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 18 -->
+                                <div class="item mayorista" data-lat="1.853201" data-lng="-76.046655" data-info="Sucursal 18">
+                                    <div class="number">ALMACEN OPORTUNIDADES PITALITO</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES PITALITO</div>
+                                        <div class="address">CL 7 No. 5- 41 Primer piso</div>
+                                        <div class="place">PITALITO - HUILA</div>
+                                        <div class="more">Tel:(608) 8351380</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 19 -->
+                                <div class="item mayorista" data-lat="8.878440" data-lng="-75.791642" data-info="Sucursal 19">
+                                    <div class="number">ALMACEN OPORTUNIDADES CERETÉ</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES CERETÉ</div>
+                                        <div class="address">CR15 No. 9A-30 LC 6 AV. Santader</div>
+                                        <div class="place">CERETÉ - CORDOBA</div>
+                                        <div class="more">Tel:(321) 4903130</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 20 -->
+                                <div class="item mayorista" data-lat="2.198578" data-lng="-75.628392" data-info="Sucursal 20">
+                                    <div class="number">ALMACEN OPORTUNIDADES GARZON</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES GARZON</div>
+                                        <div class="address">CR 11 No. 8-36 LC Comercial</div>
+                                        <div class="place">GARZON - HUILA</div>
+                                        <div class="more">Tel:(608) 8331314</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 21 -->
+                                <div class="item mayorista" data-lat="4.537009" data-lng="-75.673702" data-info="Sucursal 21">
+                                    <div class="number">ALMACEN OPORTUNIDADES ARMENIA II</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES ARMENIA II</div>
+                                        <div class="address">CR 18 No. 20-00</div>
+                                        <div class="place">ARMENIA - QUINDÍO</div>
+                                        <div class="more">Tel:(608)7362876</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 22 -->
+                                <div class="item mayorista" data-lat="9.228258" data-lng="-75.815203" data-info="Sucursal 22">
+                                    <div class="number">ALMACEN OPORTUNIDADES LORICA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES LORICA</div>
+                                        <div class="address">CL 4 A No.23-19</div>
+                                        <div class="place">LORICA - CORDOBA</div>
+                                        <div class="more">Tel:(313) 8870848</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 23 -->
+                                <div class="item mayorista" data-lat="5.349066" data-lng="-72.400056" data-info="Sucursal 23">
+                                    <div class="number">ALMACEN OPORTUNIDADES YOPAL</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES YOPAL</div>
+                                        <div class="address">CR 21 No. 8-31</div>
+                                        <div class="place">YOPAL - CASANARE</div>
+                                        <div class="more">Tel:(608)6354497</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 24 -->
+                                <div class="item mayorista" data-lat="4.153075" data-lng="-74.884289" data-info="Sucursal 24">
+                                    <div class="number">ALMACEN OPORTUNIDADES ESPINAL</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES ESPINAL</div>
+                                        <div class="address">CR 4 No. 8-25</div>
+                                        <div class="place">ESPINAL - TOLIMA</div>
+                                        <div class="more">Tel:(608)2484459</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 25 -->
+                                <div class="item mayorista" data-lat="5.197317" data-lng="-74.895637" data-info="Sucursal 25">
+                                    <div class="number">ALMACEN OPORTUNIDADES MARIQUITA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES MARIQUITA</div>
+                                        <div class="address">CR 4 No. 7-37/39</div>
+                                        <div class="place">MARIQUITA - TOLIMA</div>
+                                        <div class="more">Tel:(317) 6666865</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 26 -->
+                                <div class="item mayorista" data-lat="5.341547" data-lng="-72.397134" data-info="Sucursal 26">
+                                    <div class="number">ALMACEN OPORTUNIDADES YOPAL</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES YOPAL</div>
+                                        <div class="address">CR 20 No. 16-35</div>
+                                        <div class="place">YOPAL - CASANARE</div>
+                                        <div class="more">Tel:(608) 6359393</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 27 -->
+                                <div class="item mayorista" data-lat="2.943434" data-lng="-75.287593" data-info="Sucursal 27">
+                                    <div class="number">ALMACEN OPORTUNIDADES NEIVA</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES NEIVA</div>
+                                        <div class="address">CL 8 No 48-145 C.C. Santa Lucia (Local 2-21)</div>
+                                        <div class="place">NEIVA - HUILA</div>
+                                        <div class="more">Tel:(608) 8650909</div>
+                                    </div>
+                                </div>
+
+                                <!-- Tienda 30 -->
+                                <div class="item mayorista" data-lat="4.535509" data-lng="-75.674708" data-info="Sucursal 30">
+                                    <div class="number">ALMACEN OPORTUNIDADES ARMENIA III</div>
+                                    <div class="data">
+                                        <div class="title">ALMACEN OPORTUNIDADES ARMENIA III</div>
+                                        <div class="address">CR 18 No 19-60 Ed. Almallas LC 103</div>
+                                        <div class="place">ARMENIA - QUINDÍO</div>
+                                        <div class="more">Tel:(606)7413669</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 01 -->
+                                <div class="item mayorista" data-lat="4.604772" data-lng="-74.073647" data-info="Oficina 01">
+                                    <div class="number">OFICINA LIBRANZA BOGOTÁ</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA BOGOTÁ</div>
+                                        <div class="address">CLL 17 # 8-62 C.C. Unicompras OF203-204</div>
+                                        <div class="place">BOGOTÁ - CUNDINAMARCA</div>
+                                        <div class="more">Tel:(317) 6975995 (601) 243 2302</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 02 -->
+                                <div class="item mayorista" data-lat="4.732203" data-lng="-74.023592" data-info="Oficina 02">
+                                    <div class="number">OFICINA LIBRANZA BOGOTÁ NORTE</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA BOGOTÁ NORTE</div>
+                                        <div class="address">CR 7 # 156–10,ED Krystal Piso 23-04</div>
+                                        <div class="place">BOGOTÁ - CUNDINAMARCA</div>
+                                        <div class="more">Tel:(321) 4903129 (601) 3906900</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 03 -->
+                                <div class="item mayorista" data-lat="3.452988" data-lng="-76.531888" data-info="Oficina 03">
+                                    <div class="number">OFICINA LIBRANZA CALI</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA CALI</div>
+                                        <div class="address">CRA 4 #12-41 OFC 211 ED Seguros Bolívar</div>
+                                        <div class="place">CALI - VALLE DEL CAUCA</div>
+                                        <div class="more">Tel:(321) 8429989 (602) 4871005</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 04 -->
+                                <div class="item mayorista" data-lat="7.120208" data-lng="-73.122886" data-info="Oficina 04">
+                                    <div class="number">OFICINA LIBRANZA BUCARAMANGA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA BUCARAMANGA</div>
+                                        <div class="address">CLL 35 # 19-41 OFC 117 CC La Triada</div>
+                                        <div class="place">BUCARAMANGA - SANTANDER</div>
+                                        <div class="more">Tel:(317) 5860306 (607) 6884745</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 04 -->
+                                <div class="item mayorista" data-lat="5.067956" data-lng="-75.519355" data-info="Oficina 04">
+                                    <div class="number">OFICINA LIBRANZA MANIZALES</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA MANIZALES</div>
+                                        <div class="address">CRA. 22 # 19 - 17 Local 17i</div>
+                                        <div class="place">MANIZALES - CALDAS</div>
+                                        <div class="more">Tel:(317) 4901941 (606) 8828990</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 05 -->
+                                <div class="item mayorista" data-lat="6.253396" data-lng="-75.567905" data-info="Oficina 05">
+                                    <div class="number">OFICINA LIBRANZA MEDELLÍN</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA MEDELLÍN</div>
+                                        <div class="address">CRA 49 # 50-41 Local 112 CC Junín Candelaria</div>
+                                        <div class="place">MEDELLÍN - ANTIOQUIA</div>
+                                        <div class="more">Tel:(317) 4599822 (606) 5113559</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 06 -->
+                                <div class="item mayorista" data-lat="5.534000" data-lng="-73.361714" data-info="Oficina 06">
+                                    <div class="number">OFICINA LIBRANZA TUNJA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA TUNJA</div>
+                                        <div class="address">CRA 10 # 20-91 CC El virrey OFC 214</div>
+                                        <div class="place">TUNJA - BOYACA</div>
+                                        <div class="more">Tel:(312) 7770034 (608) 7401719</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 07 -->
+                                <div class="item mayorista" data-lat="4.442417" data-lng="-75.240626" data-info="Oficina 07">
+                                    <div class="number">OFICINA LIBRANZA IBAGUÉ</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA IBAGUÉ</div>
+                                        <div class="address">CRA 2 # 12-90 Centro-Dentro del Almacén Oportunidades</div>
+                                        <div class="place">IBAGUE - TOLIMA</div>
+                                        <div class="more">Tel:(316) 4536024 (608) 2761913</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 08 -->
+                                <div class="item mayorista" data-lat="4.814061" data-lng="-75.696111" data-info="Oficina 08">
+                                    <div class="number">OFICINA LIBRANZA PEREIRA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA PEREIRA</div>
+                                        <div class="address">CRA. 8 # 20 - 51-Dentro del almacén oportunidades</div>
+                                        <div class="place">PEREIRA - RISARALDA</div>
+                                        <div class="more">Tel:(320) 3139307 (606) 3358652</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 09 -->
+                                <div class="item mayorista" data-lat="4.151281" data-lng="-73.635066" data-info="Oficina 09">
+                                    <div class="number">OFICINA LIBRANZA VILLAVICENCIO</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA VILLAVICENCIO</div>
+                                        <div class="address">CALL 37 #29-51- Centro Dentro del almacén oportunidades</div>
+                                        <div class="place">VILLAVICENCIO - META</div>
+                                        <div class="more">Tel:(320) 4752084 (608) 6628990</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 10 -->
+                                <div class="item mayorista" data-lat="8.756593" data-lng="-75.891602" data-info="Oficina 10">
+                                    <div class="number">OFICINA LIBRANZA MONTERIA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA MONTERIA</div>
+                                        <div class="address">Cra 3 # 25 - 68 Centro</div>
+                                        <div class="place">MONTERÍA - CORDOBA</div>
+                                        <div class="more">Tel:(321) 4903133 (604) 7890247</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 11 -->
+                                <div class="item mayorista" data-lat="9.304111" data-lng="-75.392619" data-info="Oficina 11">
+                                    <div class="number">OFICINA LIBRANZA SINCELEJO</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA SINCELEJO</div>
+                                        <div class="address">CLL 21 # 21 - 82 Centro</div>
+                                        <div class="place">SINCELEJO - SUCRE</div>
+                                        <div class="more">Tel:(317) 33171704 (605) 2814555</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 12 -->
+                                <div class="item mayorista" data-lat="2.928053" data-lng="-75.289792" data-info="Oficina 12">
+                                    <div class="number">OFICINA LIBRANZA NEIVA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA NEIVA</div>
+                                        <div class="address">Calle 9 # 4 - 19 Local 113 CC Las Américas</div>
+                                        <div class="place">NEIVA - HUILA</div>
+                                        <div class="more">Tel:(315) 3685353 (608) 8867897</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 13 -->
+                                <div class="item mayorista" data-lat="7.059927" data-lng="-73.866098" data-info="Oficina 13">
+                                    <div class="number">OFICINA LIBRANZA BARRANCABERMEJA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA BARRANCABERMEJA</div>
+                                        <div class="address">Calle 9 # 4 - 19 Local 113 CC Las Américas</div>
+                                        <div class="place">BARRANCABERMEJA - SANTANDER</div>
+                                        <div class="more">Tel:(318) 8134512 (607) 6115188</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 14 -->
+                                <div class="item mayorista" data-lat="4.298004" data-lng="-74.806123" data-info="Oficina 14">
+                                    <div class="number">OFICINA LIBRANZA GIRARDOT</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA GIRARDOT</div>
+                                        <div class="address">CL 49 # 15 -56 Local 109 Colombia</div>
+                                        <div class="place">BARRANCABERMEJA - SANTANDER</div>
+                                        <div class="more">Tel:(316) 6200762 (601) 8889933</div>
+                                    </div>
+                                </div>
+
+                                <!-- Oficina 15 -->
+                                <div class="item mayorista" data-lat="11.239297" data-lng="-74.209921" data-info="Oficina 15">
+                                    <div class="number">OFICINA LIBRANZA SANTA MARTA</div>
+                                    <div class="data">
+                                        <div class="title">OFICINA LIBRANZA SANTA MARTA</div>
+                                        <div class="address">Calle 9 # 4 - 19 Local 113 CC Las Américas</div>
+                                        <div class="place">SANTA MARTA - MAGDALENA</div>
+                                        <div class="more">Tel:(316) 6200762 (601) 8889933</div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 right">
+                        <div id="map-canvas"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page -->
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+    </body>
+
+    <!-- Scripts -->
+    <vtex:template id="commonScripts" />
+    <vtex:template id="OP-CommonScripts" />
+    <script type="text/javascript">
+        jQuery('.sucursales-page .bread-crumb ul').append('<li class="last"><strong><a title="Locales" href="javascript:void(0)">Locales</a></strong></li>');
+    </script>
+</html>

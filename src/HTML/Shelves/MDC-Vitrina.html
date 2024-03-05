@@ -1,0 +1,64 @@
+<!--
+ *
+ * Desarrollado por Master del Ecommerce
+ * masterdelecommerce.com
+ *
+ * Template v1.0
+ *
+ -->
+
+ #set($id = $product.Id)
+ #set($idSku = $product.productVariantId)
+ #set($uri = $product.Uri)
+ #set($escapedName = $product.HtmlEscapedName)
+
+
+<div class="shelf" data-skuid="$idSku" data-productid="$id">
+    <div class="productImageContainer">
+        <a class="productImage" title="$escapedName" href="$uri">
+            $product.GetImageTag(30)
+        </a>
+        <div class="productFlagsContainer">
+            $product.HightLight
+        </div>
+        <div class="productDiscount">
+        </div>
+    </div>
+    <div class="productNameContainer">
+        <a class="productName" title="$escapedName" href="$uri">
+            $product.Name
+        </a>
+    </div>
+    #if($product.isInStock)
+    <div class="productPricesContainer">
+        #if ($product.HasBestPrice)
+            <div class="productListPrice">
+                $product.ListPrice
+            </div>
+            <div class="productBestPrice">
+                $product.BestPrice
+            </div>
+        #else
+            <div class="productBestPrice">
+                $product.BestPrice
+            </div>
+        #end
+        <div class="product-third-price" style="display: none;">
+        </div>
+    </div>
+    #end
+    <div class="productBuyButtonContainer">
+        #if($product.IsInStock)
+            <a class="productBuyButton" title="$escapedName" href="$uri">
+                VER PRODUCTO
+            </a>
+            <div class="productQuickView">
+                <a class="thickbox qvBinded" data-productid="$id" alt="$escapedName" tabindex="0">Ver</a>
+            </div>
+        #else
+            <a class="productBuyButton" style="width: 100%;" title="$escapedName" href="">
+                AGOTADO <i class="fa fa-lock"></i>
+            </a>
+        #end
+    </div>
+</div>

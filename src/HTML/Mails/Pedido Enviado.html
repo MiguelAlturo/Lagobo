@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Pedido Confirmado - Oportunidades</title>
+    <style type="text/css">
+        #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+        body{height:100% !important; margin:0; padding:0; width:100% !important;}
+        body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+        table{border-collapse:collapse !important; table-layout: fixed;}
+        table td {border-collapse: collapse;}
+        table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+        img{ line-height:100%;outline:none;border:0;border:none; text-decoration:none;-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+        a img {border:none;display:block;}
+        a {color: #000;text-decoration: none;text-decoration:none;}
+        h3{
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.2;
+            text-align: left;
+            font-weight: bold;
+            margin: 0;
+        }
+        h3 + span{
+            line-height: 1.2;
+            font-size: 16px;
+            color: #000000;
+        }
+        svg{
+            color: #FFFFFF;
+        }
+
+        .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  */
+        #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+
+        .appleBody a {color:#68440a; text-decoration: none;}
+        .appleFooter a {color:#999999; text-decoration: none;}
+
+        .status_border {
+            position: relative;
+        }
+
+        .status_border::before {
+            content: "";
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid #00C4FF;
+            z-index: 1;
+        }
+
+        .status_border.border_left::before {
+            right: unset;
+            left: 0;
+        }
+
+        .status_border.border_right::after {
+            content: "";
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid #00C4FF;
+            z-index: 1;
+        }
+
+        .status_border.no_color::before,
+        .status_border.border_right.no_color::after {
+            border-color: #EBF1FB;
+        }
+
+        /* Constrain email width for small screens */
+        @media screen and (max-width: 640px) {
+            .hide-mobile{
+                display: none !important;
+            }
+            .center-mobile{
+                text-align: center !important;
+            }
+            table[class="container"] {
+                width: 100% !important;
+            }
+            td[class="container"] {
+                display: inline-block;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                width: 100% !important;
+            }
+            td.container{
+                display: inline-block;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                width: 100% !important;
+            }
+
+            td[class="code-wrapper"] {
+                padding:0 5% !important;
+            }
+            td[class="code"] {
+                font-size:18px !important;
+            }
+            td.one-two{
+                width: 50% !important;
+                display: inline-block;
+                text-align: center !important;
+                padding: 0 !important;
+                line-height: 1;
+                border: none !important;
+            }
+            table.one-third{
+                width: 33.33333% !important;
+                border: none !important;
+            }
+            td.one-third{
+                width: 33.33333% !important;
+                border: none !important;
+            }
+            td.two-third{
+                width: 66.66666% !important;
+                display: inline-block;
+                text-align: center !important;
+                padding: 0 !important;
+                line-height: 1;
+                border: none !important;
+            }
+            table.two-third{
+                width: 66.66666% !important;
+                display: inline-block;
+                text-align: center !important;
+                padding: 0 !important;
+                line-height: 1;
+                border: none !important;
+            }
+            td.one-four{
+                width: 25% !important;
+                display: inline-block;
+                text-align: center !important;
+                padding: 0 !important;
+                line-height: 1;
+                border: none !important;
+            }
+        }
+    </style>
+</head>
+<body bgcolor="#FFFFFF" style="margin: 0; padding: 0;">
+
+    <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFFFFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
+
+        <tr>
+            <td>
+                <table border="0" class="container" cellpadding="0" cellspacing="0" width="600" align="center">
+                <!-- HEADER -->
+                <tr>
+                    <td>
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#00c4ff" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
+                            <tr>
+                                <td style="text-align: center;padding-top: 15px; padding-bottom: 10px;" valign="middle">
+                                    <a href="https://www.oportunidades.co/" target="_blank" title="Oportunidades" style="text-align:center; outline: none; color: #fff;"><img width="100%" style="margin:0 auto; display: block;margin: 20px auto;max-width: 450px;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/MDC-logo.png"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- /HEADER -->
+
+                <!-- CONTENT -->
+                <tr>
+                    <td bgcolor="#FFFFFF" style="padding: 0 20px">
+
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFFFFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
+                            <tr>
+                                <td style="padding:45px 20px 30px; text-align: left;" bgcolor="#FFFFFF">
+                                    <h2 style="font-size: 18px; line-height: 1; margin:0 auto 15px; text-align: center; color:#115EBA;">
+                                        GRACIAS POR TU COMPRA
+                                    </h2>
+                                    <h1 style="font-size: 14px; line-height: 1; margin:0 auto 15px; text-align: center; color:#115EBA;"> Hola {{clientProfileData.firstName}} </br></h1>
+                                    <p style="text-align: center;">
+                                        ¡Te tenemos una súper noticia!
+                                    </p>Estamos felices de informarte que tu pedido <b>{{orderId}}</b> fue enviado a la dirección de destino y muy pronto lo recibirás en la puerta de tu casa.</br>
+                                    Los productos que pediste en Oportunidades están en camino. Haz clic en “Rastrear” para ver donde está tu pedido. Recuerda que la guía puede tardar hasta 24 horas para mostrar información. </br>También puedes hacer el rastreo {{#if package.trackingUrl}}<a href="{{package.trackingUrl}}" target="_blank">aquí</a>{{else}} <a href="https://www.oportunidades.com.co/" target="_blank">aquí</a> {{/if}}, con tu número de guía. <br>Este correo tiene información importante acerca de tu compra, te recomendamos que lo conserves.
+                                    <br><br>
+                                    Si tienes alguna duda puedes comunicarte a nuestra línea de atención al cliente vía WhatsApp al <a style="color:#115EBA;" href="https://bit.ly/3qnuuxS" target="_blank">(+57) 320 475 20 96</a> o a través de nuestro correo <a style="color:#115EBA;" href="mailto:info@oportunidades.com.co" target="_blank">info@oportunidades.com.co</a> y te ayudaremos lo más pronto posible.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;padding-bottom: 30px;">
+                        <!-- IMAGEN ESTADO -->
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center;">
+                            <tr>
+                                <td>
+                                    <div class="status_border">
+                                        <img class="container" width="80px" style="position: relative;z-index: 2;display:block;margin:0 auto;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/Pedido-Recibido.png" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_border border_right border_left">
+                                        <img class="container" width="80px" style="position: relative;z-index: 2;display:block;margin:0 auto;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/Pago-Aprobado.png" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_border border_right border_left">
+                                        <img class="container" width="80px" style="position: relative;z-index: 2;display:block;margin:0 auto;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/Pedido-Facturado.png" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_border border_right border_left">
+                                        <img class="container" width="80px" style="position: relative;z-index: 2;display:block;margin:0 auto;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/Pedido-Enviado.png" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_border border_left no_color">
+                                        <img class="container" width="80px" style="position: relative;z-index: 2;display:block;margin:0 auto;" alt="Oportunidades" src="https://lagobo.vtexassets.com/arquivos/Pedido-Entregado-Desactivado.png" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="font-size: 12px;color: #115EBA;font-weight: normal;margin:15px 0;word-break: break-all; line-height: 1.2;">
+                                        Pedido <br>
+                                        Recibido
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="font-size: 12px;color: #115EBA;font-weight: normal;margin:15px 0;word-break: break-all; line-height: 1.2;">
+                                        Pago <br>
+                                        Aprobado
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="font-size: 12px;color: #115EBA;font-weight: normal;margin:15px 0;word-break: break-all; line-height: 1.2;">
+                                        Pedido <br>
+                                        Facturado
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="font-size: 12px;color: #115EBA;font-weight: normal;margin:15px 0;word-break: break-all; line-height: 1.2;">
+                                        Pedido <br>
+                                        Enviado
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="font-size: 12px;color: #115EBA;font-weight: normal;margin:15px 0;word-break: break-all; line-height: 1.2;">
+                                        Pedido <br>
+                                        Entregado
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- IMAGEN ESTADO -->
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px;">
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
+                            <tr>
+                                <td style="padding:0 20px 35px; text-align: center;color: #115EBA;">
+                                    <h3 style="text-align: center;text-transform: uppercase;margin-bottom: 10px;color: #115EBA;">Número de pedido</h3>
+                                    <span style="text-transform: uppercase;color: #115EBA;">{{orderId}}</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 0">
+                                    <h3 style="color: #115EBA; font-size: 18px; letter-spacing:1px; line-height: 1.2;text-align: left;font-weight: bold;text-transform: uppercase;">INFORMACIÓN DE TU COMPRA</h3>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- ORDER DETAILS -->
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFFFFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; ">
+                            <tr style="vertical-align: baseline;">
+                                <td style="text-align: left;padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Fecha de pedido</h3>
+                                    <span style="color: #115EBA;font-size: 12px;letter-spacing: .5px;text-transform: uppercase;">{{formatDate creationDate}}</span>
+                                </td>
+                                <td style="text-align: left;padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Nombre del cliente</h3>
+                                    <span style="color: #115EBA;font-size: 12px;letter-spacing: .5px;text-transform: capitalize;color: #115EBA;">{{clientProfileData.firstName}} {{clientProfileData.lastName}}</span>
+                                </td>
+                            </tr>
+                            <tr style="vertical-align: baseline;">
+                                <td style="padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Medio de pago</h3>
+                                    <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">
+                                        {{#each paymentData.transactions.0.payments}}
+                                            {{#eq paymentSystemName "Vale"}}
+                                                Cupón: <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">{{formatCurrency value}}</span><br />
+                                            {{else}}
+                                                {{paymentSystemName}}{{#if lastDigits}} - <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">{{lastDigits}}</span>{{/if}}<br />
+                                                Valor: <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">${{formatCurrency value}}</span>
+                                            {{/eq}}
+                                        {{/each}}
+                                    </span>
+                                </td>
+                                <td style="padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Direccion de entrega</h3>
+                                    <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">
+                                        {{#if giftRegistryData}}
+                                                Name:<br /><span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">{{giftRegistryData.description}}</span><br />
+                                        {{else}}
+                                            {{shippingData.address.street}} - {{shippingData.address.complement}} - {{shippingData.address.neighborhood}}</span><br />
+                                            <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">{{shippingData.address.city}}, {{shippingData.address.state}}</span>
+                                        {{/if}}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Transportadora</h3>
+                                    <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;text-transform: capitalize;">{{shippingData.logisticsInfo.0.slas.0.deliveryIds.0.courierName}}</span>
+                                </td>
+                                <td style="padding:10px 0px;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Valor</h3>
+                                    <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">
+                                        {{#each paymentData.transactions.0.payments}}
+                                            {{#eq paymentSystemName "Vale"}}
+                                                Cupón: <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">{{formatCurrency value}}</span><br />
+                                            {{else}}
+                                                Valor: <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">${{formatCurrency value}}</span>
+                                            {{/eq}}
+                                        {{/each}}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="vertical-align: baseline;">
+                                <td style="padding:10px 0;">
+                                    <h3 style="color: #115EBA;font-size: 14px;letter-spacing: 1px;">Mis pedidos</h3>
+                                    <span style="color: #115EBA; font-size: 12px; letter-spacing: .5px;font-weight: 300;">
+                                        <a href="{{ordersUrl}}" style="color: #115EBA; font-size: 12px; letter-spacing: .5px; line-height: 22px; text-transform: uppercase; font-weight: bold; border-bottom: 1px solid #115EBA; display: inline-block;">{{orderId}}</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- ORDER DETAILS -->
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 25px 0;">
+                        <!-- ORDER ITEMS -->
+                        <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFFFFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;border-collapse:collapse; table-layout:fixed; ">
+                            <tr>
+                                <td style="padding:30px 30px 30px 30px; text-align: left;">
+                                    <h2 style="color: #115EBA;font-size: 18px; line-height: 1; margin:0 auto; text-align: left; display: inline-block;">DETALLES DE TU PEDIDO</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 0;border-collapse:collapse; table-layout:fixed; border-bottom: 1px solid #115EBA;border-radius: 25px;">
+                                    {{#each items}}
+                                    <table class="container" cellspacing="0"  style="background:transparent;border:none; color:#115EBA; font-size:14px; border-collapse:collapse; table-layout:fixed;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 10px;" width="100%">
+                                            <tr>
+                                                <td width="200" align="center" class="one-third" style=" background-color: #FFFFFF;">
+                                                    <a href="https://www.oportunidades.com.co{{detailUrl}}" target="_blank">
+                                                        <img src="{{replace imageUrl '100-112' '112-112'}}" width="110" style="padding: 20px; border: 1px solid #115EBA;border-radius: 5px; display: block;" alt="Img - {{name}}" />
+                                                    </a>
+                                                </td>
+                                                <td width="385" class="one-third" style="padding-left:15px;" valign="top">
+                                                    <span style="color:#115EBA;line-height:1.2; font-size: 16px; font-weight:bold;">{{name}}</span><br />
+                                                    <span style="color:#115EBA;line-height:1.2; font-size: 12px; font-weight:300;">Cod: {{ean}}</span><br /><br />
+                                                    <span style="font-size:16px; color:#000; font-family:'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;"><strong>Cantidad:</strong> {{quantity}}</span><br /><br />
+                                                    <span style="font-size: 16px;line-height: 1.2;font-weight: bold;color:#000;">
+                                                        Valor: ${{formatCurrency sellingPrice}}
+                                                    </span><br />
+                                                    {{#each bundleItems}}
+                                                        {{#if name}}
+                                                            <span style="font-family:'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;">{{name}}</span><br />
+                                                            <span style="font-family:'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;">${{formatCurrency price}}</span><br />
+                                                        {{/if}}
+                                                    {{/each}}<br />
+                                                    <a href="https://www.oportunidades.com.co{{detailUrl}}" target="_blank" style="color:#000;font-weight:bold;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: underline; font-size:14px;line-height:16px;">Ver producto</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                    {{/each}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 1px solid #ccc; padding: 30px 30px 0; ">
+                                    <table class="container" width="40%" align="right" border="0" cellspacing="0" cellpadding="0" style="font-size:16px;color:#115EBA;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; ">
+                                        {{#each totals}}
+                                            {{#if value}}
+                                                <tr>
+                                                    <td align="right" style="padding-bottom:10px;color: #115EBA;" valign="top">
+                                                        {{#eq id "Items"}}Subtotal: {{/eq}}
+                                                        {{#eq id "Discounts"}}Descuentos: {{/eq}}
+                                                        {{#eq id "Shipping"}}Envío: {{/eq}}
+                                                        {{#eq id "Tax"}}Impuestos: {{/eq}}
+                                                    </td>
+                                                    <td align="right" style="padding-bottom:10px;color: #115EBA;" valign="top"><span style="font-size:15px;">${{formatCurrency value}}</span></td>
+                                                </tr>
+                                            {{/if}}
+                                        {{/each}}
+                                            <tr>
+                                                <td align="right">Total: </td>
+                                                <td align="right"><span style="font-size:15px;">${{formatCurrency value}}</span></td>
+                                            </tr>
+                                        </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- /ORDER ITEMS -->
+
+                    </td>
+                </tr>
+                <!-- /CONTENT -->
+
+                <!--ORDER NOTES-->
+                <!-- <tr>
+                    <td style="padding: 50px 20px;">
+
+                    <table border="0" class="container" cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#FFF" style=" font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px; color: #000; ">
+                        <tr>
+                            <td>
+                                <p style="padding-bottom: 30px;color:#f00;">Keep in mind that the delivery time counts as soon as the payment processor approves your payment.</p>
+                                <p>If you want to speak with us on our toll free <a href="tel:18449986886" style="color:#000; font-weight: bold;">844.99.Oportunidades (86886)</a>. If you prefer you can send an email to <a href="mailto:help@Oportunidades.com" style="color:#000; font-weight: bold;">help@Oportunidades.com</a>, we would be happy to talk to you</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    </td>
+                </tr> -->
+                <!-- /ORDER NOTES-->
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- /CONTENT -->
+    <!-- FOOTER -->
+    <table border="0" class="container" style="margin: auto;" cellpadding="0" cellspacing="0" width="600px">
+        <tr>
+            <td>
+                <img src="https://lagobo.vtexassets.com/arquivos/don_oportuno_1.png" width="150" style="display: block;;margin: auto;" alt=""/>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 20px;font-size: 13px;line-height: 1.2;">
+                <p style="text-align: justify;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;color:#115EBA;">
+                    Nota: <br>
+                    Recuerda que, al momento de recibir tu pedido, tú o la persona (mayor de edad) que hayas autorizado, deberá presentar el documento de identidad al transportador. No olvides revisar que el producto y su contenido se encuentren en perfecto estado antes de firmar la guía con nombre y cédula. El plazo de envío será considerado a partir del siguiente día hábil después de que hayas llevado a cabo el proceso de pago y/o tu pago sea aprobado. Si deseas realizar cualquier anulación o modificación a tu pedido, debes comunicarte a nuestra línea de atención al cliente vía WhatsApp al <a style="color:#115EBA;" href="https://bit.ly/3qnuuxS" target="_blank">(+57) 320 475 20 96</a> o a través de nuestro correo <a style="color:#115EBA;" href="mailto:info@oportunidades.com.co" target="_blank">info@oportunidades.com.co</a> y te ayudaremos lo más pronto posible.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <table border="0" class="container" style="margin: auto;" cellpadding="0" cellspacing="0" width="600px" bgcolor="#FFFFFF">
+        <tr>
+            <td bgcolor="#FFFFFF" align="center" style=" text-align: center;">
+
+                <table align="center" border="0" class="container" cellpadding="0" cellspacing="0" width="600" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #FFFFFF; color: #115EBA; font-size: 14px;" bgcolor="#FFFFFF">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table align="center" width="100%">
+                                    <tr>
+                                        <td></td>
+                                        <td width="170">
+                                            <p style="font-size: 10px;text-align: center;color: #115EBA;font-weight: bold;">
+                                                Marca líder en <br>electrodomésticos en Colombia
+                                            </p>
+                                        </td>
+                                        <td width="80">
+                                            <img style="display: block;;margin: 0 auto;" width="60" src="https://lagobo.vtexassets.com/arquivos/asodelco.png" alt="">
+                                        </td>
+                                        <td width="80">
+                                            <img style="display: block;;margin: 0 auto;" width="60" src="https://lagobo.vtexassets.com/arquivos/colombia.png" alt="">
+                                        </td>
+                                        <td width="110">
+                                            <img style="display: block;;margin: 0 auto;" width="110" src="https://lagobo.vtexassets.com/arquivos/industria-y-comercio.png" alt="">
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table align="center" width="100%">
+                                    <tr>
+                                        <td>
+                                            <img width="450" style="display: block; margin: auto;" src="https://lagobo.vtexassets.com/arquivos/payment-methods.png" alt="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <!--Legals-->
+        <tr>
+            <td bgcolor="#FFF" align="center" style=" text-align: center;">
+                <table align="center" border="0" class="container" cellpadding="0" cellspacing="0" width="600" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #FFFFFF; color: #115EBA; font-size: 12px;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;padding: 20px;">
+                                <p style="margin: 0;font-weight: bold; font-size: 10px;color: #115EBA;">
+                                    COPYRIGHT 2022 © TODOS LOS DERECHOS RESERVADOS
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!--Legals-->
+    </table>
+    <!-- /FOOTER -->
+</body>
+</html>

@@ -1,0 +1,742 @@
+#producto {
+    #product-content {
+        .container {
+            max-width: 1200px;
+            @media screen and (max-width: 768px) {
+                padding: 15px;
+            }
+            .product-details {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                @media screen and (max-width: 768px) {
+                    flex-wrap: wrap;
+                }
+                .product-image {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 60%;
+                    margin-bottom: 30px;
+                    position: relative;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        flex-wrap: wrap;
+                    }
+                    /**
+                    * EasyZoom layout variations
+                    */
+                    .easyzoom-flyout {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: auto;
+                            height: auto;
+                            max-width: inherit;
+                        }
+                    }
+                    .easyzoom--adjacent {
+                        .easyzoom-flyout {
+                            top: 0;
+                            left: 100%;
+                            width: 100%;
+                            height: 100%;
+                            margin-left: 20px;
+                        }
+                    }
+                    .thumbs-container {
+                        width: 120px;
+                        min-width: 120px;
+                        max-width: 120px;
+                        height: 100%;
+                        @media screen and (max-width: 768px) {
+                            order: 2;
+                            width: 100%;
+                            max-width: 90%;
+                            margin: 20px auto 0;
+                            height: auto;
+                        }
+                        img {
+                            width: 100%;
+                            margin: auto;
+                            padding: 2.5px;
+                            border: 1px solid transparent;
+                            opacity: 0.5;
+                            transition: all 0.5s;
+                            cursor: pointer;
+                        }
+                        .slick-slide {
+                            margin-bottom: 20px;
+                            &.slick-active {
+                                &.slick-current {
+                                    img {
+                                        opacity: 1;
+                                        border: 1px solid $darkGray;
+                                    }
+                                }
+                            }
+                        }
+                        .video-thumb {
+                            position: relative;
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.3);
+                            }
+                        }
+                        .slick-arrow {
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            &.slick-prev {
+                                top: -20px;
+                            }
+                            &.slick-next {
+                                top: calc(100% + 15px);
+                            }
+                            &::before {
+                                color: $darkBlue;
+                                display: inline-block;
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                    .image-container {
+                        width: calc(100% - 120px);
+                        margin: 0 15px;
+                        @media screen and (max-width: 768px) {
+                            order: 1;
+                            width: 100%;
+                        }
+                        img {
+                            width: 95%;
+                            margin: auto;
+                        }
+                        .video-container {
+                            iframe {
+                                margin: 0 2.5%;
+                            }
+                        }
+                        .easyzoom-flyout {
+                            img {
+                                width: auto;
+                            }
+                        }
+                        .slick-next {
+                            right: 0px;
+                            &::before {
+                                color: $darkBlue;
+                            }
+                        }
+                        .slick-prev {
+                            left: 0px;
+                            top: calc(50% + 10px);
+                            &::before {
+                                color: $darkBlue;
+                            }
+                        }
+                    }
+                    .cleaned-price {
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        width: 0;
+                        height: 0;
+                        border-right: 40px solid #ee1d23;
+                        border-top: 40px solid #ee1d23;
+                        border-left: 40px solid transparent;
+                        border-bottom: 40px solid transparent;
+                        .percent {
+                            color: white;
+                            font-size: 17px;
+                            display: block;
+                            font-weight: 500;
+                            font-family: $secondaryFont;
+                            position: absolute;
+                            top: -35px;
+                        }
+                    }
+                    .hightlight-colection {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        .flag {
+                            display: block;
+                            width: fit-content;
+                            background-color: $darkBlue;
+                            color: #fff;
+                            padding: 5px 10px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                .product-data {
+                    width: 40%;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+                }
+                .product-info {
+                    width: 100%;
+                    &.desktop {
+                        display: block;
+                    }
+                    &.mobile {
+                        display: none;
+                    }
+                    @media screen and (max-width: 768px) {
+                        &.desktop {
+                            display: none;
+                        }
+                        &.mobile {
+                            display: block;
+                        }
+                    }
+                    #box-bread-brumb {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 0 15px;
+                            list-style: none;
+                            li {
+                                list-style-type: none;
+                                margin-right: 10px;
+                                &:first-child {
+                                    a {
+                                        font-size: 0;
+                                    }
+                                    &::before {
+                                        content: 'OPORTUNIDADES';
+                                        font-size: 10px;
+                                        color: $gray2;
+                                        font-family: $secondaryFont;
+                                    }
+                                }
+                                &:after {
+                                    content: '/';
+                                    margin-left: 10px;
+                                    font-weight: 400;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    font-weight: 500;
+                                    font-size: 10px;
+                                    text-transform: uppercase;
+                                    color: $gray;
+                                    font-family: $secondaryFont;
+                                }
+                                &:last-child {
+                                    margin-right: 0;
+                                    &:after {
+                                        content: '';
+                                        margin-left: 0;
+                                    }
+                                    a {
+                                        font-weight: 900;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .product-name {
+                        margin-bottom: 10px;
+                        h1 {
+                            margin: 0;
+                        }
+                        .productName {
+                            font-weight: bold;
+                            font-size: 25px;
+                            font-family: $secondaryFont;
+                            line-height: 1.2;
+                            color: $black2;
+                            max-width: 300px;
+                            text-align: center;
+                            margin: auto;
+                        }
+                    }
+                    .product-brand-reference {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 10px;
+                        .product-reference {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            color: $black2;
+                            .skuReference {
+                                margin-left: 5px;
+                                font-size: 12px;
+                                color: $black2;
+                            }
+                        }
+                        .product-brand {
+                            margin-left: 5px;
+                            .brandName {
+                                a {
+                                    font-size: 0;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                    .sku-selector-box {
+                        .sku-selector-container {
+                            ul {
+                                list-style: none;
+                                max-width: 210px;
+                                margin: auto;
+                                width: 100%;
+                                @media screen and (max-width: 768px) {
+                                    max-width: 100%;
+                                }
+                                li {
+                                    list-style-type: none;
+                                    &.specification {
+                                        font-family: $secondaryFont;
+                                        font-weight: 800;
+                                        font-size: 14px;
+                                        width: 100%;
+                                        display: block;
+                                        margin-bottom: 10px;
+                                        color: $black2;
+                                        text-transform: uppercase;
+                                    }
+                                    &.skuList {
+                                        margin-bottom: 10px;
+                                        select {
+                                            width: 100%;
+                                            padding: 10px 5px;
+                                            border: 1px solid $black;
+                                            font-weight: 600;
+                                            font-size: 14px;
+                                            font-family: $secondaryFont;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .price-box {
+                        margin-bottom: 10px;
+                        .plugin-preco {
+                            display: none;
+                        }
+                        .cleaned-price {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            span {
+                                &.listPrice {
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    text-decoration: line-through;
+                                    color: $darkRed;
+                                }
+                                &.bestPrice {
+                                    font-family: $secondaryFont;
+                                    font-weight: 700;
+                                    font-size: 23px;
+                                    line-height: 27px;
+                                    color: $black2;
+                                    &.sale {
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                            .percent {
+                                display: none;
+                            }
+                            .thirdPrice-flex {
+                                width: 100%;
+                                margin-top: 5px;
+                                text-align: center;
+                                span {
+                                    font-size: 1.2rem;
+                                    color: $promoRed;
+                                    font-weight: 700;
+                                }
+                            }
+                            .product-third-price {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                margin: 10px auto;
+                                width: 100%;
+                                .promo-img {
+                                    margin-right: 10px;
+                                    img {
+                                        max-width: 40px;
+                                    }
+                                }
+                                .promo-price {
+                                    text-align: left;
+                                    .third-price {
+                                        font-size: 24px;
+                                        color: #ee1d23;
+                                        font-weight: bold;
+                                    }
+                                    a {
+                                        font-size: 15px;
+                                        color: #000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .buy-button-box {
+                        margin-bottom: 10px;
+                        .qty {
+                            margin-bottom: 10px;
+                            .quantity-selector-container {
+                                .quantitySelector {
+                                    label {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .quantityText {
+                                            display: none;
+                                        }
+                                        input[type='number'] {
+                                            height: 40px;
+                                            line-height: 40px;
+                                            text-align: center;
+                                            -moz-appearance: textfield;
+                                            font-family: $secondaryFont;
+                                            color: $black2;
+                                            width: 170px;
+                                            @media screen and (max-width: 768px) {
+                                                width: calc(100% - 80px);
+                                            }
+                                            &::-webkit-inner-spin-button,
+                                            &::-webkit-outer-spin-button {
+                                                -webkit-appearance: none;
+                                                margin: 0;
+                                            }
+                                        }
+                                        .quantity-button {
+                                            border-style: solid;
+                                            border-color: $black;
+                                            height: 40px;
+                                            width: 20px;
+                                            line-height: 40px;
+                                            text-align: center;
+                                            font-weight: bold;
+                                            font-size: 17px;
+                                            font-family: $secondaryFont;
+                                            cursor: pointer;
+                                            @media screen and (max-width: 768px) {
+                                                width: 40px;
+                                            }
+                                            &.quantity-down {
+                                                border-width: 1px 0 1px 1px;
+                                            }
+                                            &.quantity-up {
+                                                border-width: 1px 1px 1px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .buy-button,
+                        .cuotas-button {
+                            margin-bottom: 10px;
+                            .buy-in-page-quantity {
+                                display: none !important;
+                            }
+                            a {
+                                color: $white;
+                                width: 210px;
+                                font-family: $secondaryFont;
+                                display: block;
+                                margin: auto;
+                                background-color: $lightBlue;
+                                border: 1px solid $lightBlue;
+                                text-align: center;
+                                text-decoration: none;
+                                height: 40px;
+                                line-height: 40px;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                font-weight: 800;
+                                border-radius: 15px;
+                                cursor: pointer;
+                                @media screen and (max-width: 768px) {
+                                    width: 100%;
+                                }
+                                &.buy-in-page-button {
+                                    border: 1px solid $darkRed;
+                                    background-color: $darkRed;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .cuotas-button {
+                            a {
+                                height: auto;
+                                text-align: center;
+                                line-height: 20px;
+                                span {
+                                    display: block;
+                                    font-size: 8px;
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                        .product-unavailable {
+                            color: $darkRed;
+                            width: 210px;
+                            font-family: $secondaryFont;
+                            display: block;
+                            margin: auto;
+                            background-color: $white;
+                            border: 1px solid $darkRed;
+                            text-align: center;
+                            text-decoration: none;
+                            height: 40px;
+                            line-height: 40px;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            font-weight: 800;
+                            cursor: pointer;
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    #tablaEnvios {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        max-width: 350px;
+                        margin: 0 auto 10px;
+                        @media screen and (max-width: 768px) {
+                            max-width: 100%;
+                        }
+                        .title {
+                            font-family: $secondaryFont;
+                            font-weight: 800;
+                            font-size: 12px;
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 10px;
+                            color: $black2;
+                            text-transform: uppercase;
+                            @media screen and (max-width: 768px) {
+                                margin: 30px 0;
+                            }
+                        }
+                        select {
+                            width: calc(50% - 5px);
+                            padding: 10px 5px;
+                            border: 1px solid $black;
+                            font-weight: 600;
+                            font-size: 10px;
+                            font-family: $secondaryFont;
+                            margin-bottom: 10px;
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+                            &#departamentos {
+                            }
+                            &#ciudades {
+                                margin-left: 10px;
+                                @media screen and (max-width: 768px) {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                        p {
+                            display: block;
+                            width: 100%;
+                            color: $darkBlue;
+                            font-weight: 800;
+                            font-size: 12px;
+                            font-family: $secondaryFont;
+                            padding: 15px 0;
+                            background-color: $lightGray3;
+                            text-align: center;
+                        }
+                    }
+                    .payment-methods {
+                        max-width: 350px;
+                        margin: 0 auto 10px;
+                        @media screen and (max-width: 768px) {
+                            max-width: 100%;
+                        }
+                        .title {
+                            font-family: $secondaryFont;
+                            font-weight: 800;
+                            font-size: 12px;
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 10px;
+                            color: $black2;
+                            text-transform: uppercase;
+                            @media screen and (max-width: 768px) {
+                                margin: 30px 0;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .extra-information {
+                margin: 50px auto;
+                #tabsDescripcion {
+                    .nav-tabs {
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        li {
+                            list-style-type: none;
+                            border: 1px solid $darkBlue;
+                            transition: all 0.5s;
+                            cursor: pointer;
+                            padding: 20px 15px;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            a {
+                                color: $darkBlue;
+                                font-weight: 800;
+                                font-size: 18px;
+                                font-family: $secondaryFont;
+                                text-decoration: none;
+                            }
+                            &.active {
+                                border-bottom: 5px solid $darkBlue;
+                            }
+                        }
+                    }
+                    .tab-content {
+                        margin-top: 30px;
+                        .tab-pane {
+                            max-width: 0;
+                            max-height: 0;
+                            opacity: 0;
+                            overflow: hidden;
+                            transition: all 0.5s;
+                            &.active {
+                                max-width: 100%;
+                                max-height: 200vh;
+                                opacity: 1;
+                            }
+                            h2 {
+                                .productDescriptionShort {
+                                    font-family: $secondaryFont;
+                                    font-weight: 800;
+                                    font-size: 18px;
+                                    margin-bottom: 15px;
+                                    color: $darkBlue;
+                                }
+                            }
+                            .productDescription {
+                                font-weight: normal;
+                                font-size: 14px;
+                                color: $black2;
+                            }
+                            &#especificaciones {
+                                h2 {
+                                    display: none;
+                                }
+                                #specification {
+                                    h4 {
+                                        display: none;
+                                    }
+                                    table {
+                                        width: stretch;
+                                        margin: auto;
+                                        tbody {
+                                            max-height: max-content !important;
+                                            tr {
+                                                padding: 0;
+                                                overflow: auto;
+                                                border-left: 3px solid transparent;
+                                                th {
+                                                    font-family: $secondaryFont;
+                                                    font-weight: bold;
+                                                    font-size: 16px;
+                                                    color: $black2;
+                                                    padding-left: 10px;
+                                                    text-align: left;
+                                                    word-break: break-word;
+                                                    letter-spacing: 1px;
+                                                }
+                                                td {
+                                                    font-family: $secondaryFont;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    color: $black2;
+                                                    text-align: left;
+                                                    line-height: 50px;
+                                                    letter-spacing: 1px;
+                                                }
+                                                &:nth-child(odd) {
+                                                    background-color: $lightGray4;
+                                                }
+                                                &:nth-child(2n + 1) {
+                                                    th {
+                                                        border-left: 3px solid $lightRed;
+                                                    }
+                                                }
+                                                &:nth-child(4n + 1) {
+                                                    th {
+                                                        border-left: 3px solid $lightBlue;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                #flix-inpage {
+                    margin-top: 30px;
+                }
+            }
+            #product-related {
+                margin: 50px auto;
+                h2 {
+                    font-family: $secondaryFont;
+                    font-weight: 800;
+                    font-size: 22px;
+                    width: fit-content;
+                    display: block;
+                    margin: 30px auto;
+                    margin-bottom: 10px;
+                    color: $darkBlue;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 5px 10px;
+                    border-bottom: 1px solid $darkBlue;
+                }
+            }
+        }
+    }
+    &.quickview {
+        header,
+        footer,
+        .extra-information,
+        ._hj_feedback_container {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+<!-- 
+ * Developed by Brandlive
+ * [brandlivecommerce.com]
+ * 
+ * Based on:
+ * - Bootstrap v.3
+ * - VTEX Base Template [Home]
+ -->
+
+ <!DOCTYPE html>
+ <html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+ 
+   <head>
+     <title>Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar</title>
+     <vtex:metaTags/>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" href="/arquivos/favicon.ico"/>
+     <vtex:template id="OP-CommonStyles" />
+     <vtex:template id="OP-CommonCategoryStyles" />
+   </head>
+ 
+ <body id="landing-plp">
+ <!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPMTQ4"
+ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+     
+     <!-- SubTemplate: Header-menu -->
+     <vtex:template id="OP-Header" />
+     <div class="page">
+         
+         
+         <section id="content">
+             <div class="container">
+                 <div class="bloque banners_atributos">
+                     <vtex:contentPlaceHolder id="banners_atributos" />
+                     <a class="see-more" href="" title="Ver todos"></a>
+                 </div>
+                 
+                
+                 
+                 <div class="bloque coleccion_dos showcase-owl">
+                     <vtex:contentPlaceHolder id="coleccion_dos" />
+                   <!--  <li class="see-more"><a href="/busca/?fq=H:154" title="Ver todos">Ver todos</a></li>-->
+                 </div>            
+             </div>
+             <div class="full-width bk-gray">
+                 <div class="container">
+                
+                 </div>    
+             </div>
+             <div class="container">
+                
+                 <div class="bloque banners_bottom">
+                     <vtex:contentPlaceHolder id="banners_bottom" />
+                 </div>
+                 <!--
+                 <div class="bloque videos_bottom">
+                     <vtex:contentPlaceHolder id="videos_bottom" />
+                 </div>
+                 -->
+             </div>
+         </section>
+     </div>
+     <vtex:template id="OP-Footer" />
+     <!-- SubTemplate: Footer -->
+ </body>
+ 
+ <!-- Scripts -->
+     <vtex:template id="OP-CommonCategoryScripts" />
+     <vtex:template id="OP-CommonScripts" />
+ </html>

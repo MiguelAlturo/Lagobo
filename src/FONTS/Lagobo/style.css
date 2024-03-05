@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ncii98');
+  src:  url('fonts/icomoon.eot?ncii98#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ncii98') format('truetype'),
+    url('fonts/icomoon.woff?ncii98') format('woff'),
+    url('fonts/icomoon.svg?ncii98#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="MDCIcon-"], [class*=" MDCIcon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MDCIcon-trash:before {
+  content: "\e916";
+}
+.MDCIcon-search:before {
+  content: "\e909";
+}
+.MDCIcon-credit-card:before {
+  content: "\e90d";
+}
+.MDCIcon-menu:before {
+  content: "\e914";
+}
+.MDCIcon-like:before {
+  content: "\e900";
+}
+.MDCIcon-touch:before {
+  content: "\e901";
+}
+.MDCIcon-height:before {
+  content: "\e902";
+}
+.MDCIcon-dimensions:before {
+  content: "\e903";
+}
+.MDCIcon-hand:before {
+  content: "\e904";
+}
+.MDCIcon-arrow-down:before {
+  content: "\e905";
+}
+.MDCIcon-arrow-up:before {
+  content: "\e906";
+}
+.MDCIcon-arrow-left:before {
+  content: "\e907";
+}
+.MDCIcon-arrow-right:before {
+  content: "\e908";
+}
+.MDCIcon-logo:before {
+  content: "\e90a";
+}
+.MDCIcon-50years:before {
+  content: "\e90b";
+}
+.MDCIcon-account:before {
+  content: "\e90c";
+}
+.MDCIcon-facebook:before {
+  content: "\e90e";
+}
+.MDCIcon-instagram:before {
+  content: "\e90f";
+}
+.MDCIcon-location:before {
+  content: "\e910";
+}
+.MDCIcon-minicart:before {
+  content: "\e911";
+}
+.MDCIcon-quickview:before {
+  content: "\e912";
+}
+.MDCIcon-safe:before {
+  content: "\e913";
+}
+.MDCIcon-truck:before {
+  content: "\e915";
+}

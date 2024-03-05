@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/*============================================================================
+                Master del Ecommerce - Lagobo | Header
+==============================================================================*/
+
+#VTEX-fullTextSearchBox {
+    display: none !important;
+}
+
+.preHeader {
+    //background-color: $yellow;
+    color: $darkBlue;
+    padding: 0;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1rem;
+    .slick-arrow {
+        width: auto;
+        height: auto;
+        &.slick-prev {
+            left: 15px !important;
+        }
+        &.slick-next {
+            right: 15px !important;
+        }
+        &:before {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+    .mainContainer {
+        max-width: 100%;
+        padding: 10px 0 !important;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
+
+.mainHeader {
+    background-color: $lightBlue;
+    transition: all 0.5s;
+
+    &.fixed-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        opacity: 1;
+        z-index: 999999;
+    }
+
+    .mainContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 0;
+        position: relative;
+
+        @media only screen and (max-width: 900px) {
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding: 0 15px;
+        }
+
+        .categories {
+            font-family: $primaryFont;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: $darkBlue;
+            margin-right: 10px;
+            height: 80px;
+            line-height: 80px;
+
+            @media only screen and (max-width: 768px) {
+                margin: 0;
+                width: 10%;
+                height: auto;
+                line-height: normal;
+            }
+            @media screen and (min-width: 768px) {
+                &:hover {
+                    .categoriesContainer {
+                        max-height: 500px;
+                        max-width: 80%;
+                        width: 100%;
+                        opacity: 1;
+                        box-shadow: 0px 3px 6px #00000029;
+                    }
+                    .categoriesLabel {
+                        span {
+                            &.OPIcon-arrow-down {
+                                &::before {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .categoriesLabel {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                img {
+                    width: 32px;
+                    height: auto;
+                    margin-right: 10px;
+
+                    @media only screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                span {
+                    &::before {
+                        font-size: 8px;
+                        display: inline-block;
+                        transition: all 0.5s;
+                    }
+                    &.OPIcon-arrow-down {
+                        font-size: 8px;
+                        margin-left: 10px;
+                        line-height: normal;
+                        @media only screen and (max-width: 768px) {
+                            display: none;
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                .OPIcon-menu {
+                    &::before {
+                        font-size: 1.6rem;
+                    }
+                    cursor: pointer;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 10px;
+                        &::before {
+                            font-size: 10px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 768px) {
+                        display: inline-block;
+                        width: auto;
+                        &::before {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+
+            @import './Menu.scss';
+        }
+
+        .logo {
+            margin: 0 10px;
+
+            @media only screen and (max-width: 768px) {
+                margin: 0;
+                width: 70%;
+            }
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+            }
+        }
+
+        .search {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            height: 40px;
+            background-color: $white;
+            width: 20%;
+            max-width: 450px;
+            margin: 0 30px;
+            position: relative;
+            border-radius: 10px;
+
+            @media only screen and (max-width: 900px) {
+                order: 2;
+                width: calc(100% + 40px);
+                max-width: inherit;
+                margin: 0 -20px;
+                padding: 0;
+                height: 40px;
+                flex-direction: row-reverse;
+                position: relative;
+                border-radius: 0;
+            }
+
+            @media only screen and (max-width: 767px) {
+                height: 40px;
+                width: calc(100% + 30px);
+                margin: 0 -15px;
+                padding: 0;
+                position: unset;
+                border-radius: 0;
+            }
+
+            @import './Buscador.scss';
+        }
+
+        .stores_account_minicart {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+
+            @media only screen and (max-width: 768px) {
+                margin: 0;
+                width: 10%;
+                justify-content: flex-end;
+            }
+
+            .headerIconItem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-decoration: none;
+                width: 45px;
+                height: 45px;
+                margin: 0 5px;
+                background-color: $darkBlue;
+                border-radius: 30px;
+                transition: all 0.5s;
+                i {
+                    color: $white;
+                    transition: all 0.5s;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                    background-color: transparent;
+                    width: auto;
+
+                    &:last-child {
+                        display: flex;
+                    }
+                }
+
+                &:hover {
+                    background-color: $yellow;
+                    cursor: pointer;
+                    i {
+                        color: $darkBlue;
+                    }
+                }
+
+                &.minicart {
+                    position: relative;
+                }
+
+                & > span,
+                [class^='OPIcon-'] {
+                    text-align: center;
+                }
+
+                & > span {
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid transparent;
+                    font-size: 0.75rem;
+
+                    @media only screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                & > [class^='OPIcon-'] {
+                    font-size: 20px;
+
+                    @media only screen and (max-width: 768px) {
+                        font-size: 18px;
+                    }
+                }
+
+                & > #minicart {
+                    width: 350px;
+                    background: white;
+                    position: absolute;
+                    z-index: 10;
+                    top: 80px;
+                    right: 0;
+                    max-height: calc(95vh - 110px);
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        position: fixed;
+                        left: 50%;
+                        right: unset;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        max-height: calc(95vh);
+                    }
+                    &.active {
+                        display: block;
+                        cursor: unset;
+                    }
+
+                    @import './Minicart.scss';
+                }
+            }
+        }
+    }
+}
+
+.swal2-container {
+    .swal2-popup {
+        width: fit-content;
+        .swal2-header {
+            .swal2-title {
+                color: $black;
+                font-size: 20px;
+                margin-bottom: 0;
+                font-family: $secondaryFont;
+            }
+            .swal2-close {
+                width: auto;
+                height: auto;
+                font-size: 40px;
+                right: 15px;
+                top: 0px;
+                color: $black;
+                font-weight: bold;
+                span {
+                    height: auto;
+                    &:before {
+                        color: $black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .swal2-content {
+            margin: 10px 0;
+            padding: 0;
+            .swal2-html-container {
+                color: $black;
+                font-size: 12px;
+                iframe {
+                    border: 0 !important;
+                }
+            }
+        }
+        .swal2-actions {
+            margin-top: 0;
+            button {
+                outline: none;
+                border: 0;
+                box-shadow: none;
+                &:focus {
+                    outline: none;
+                    border: 0;
+                    box-shadow: none;
+                }
+                &.swal2-confirm {
+                    background: $darkRed;
+                    color: $white;
+                    height: 35px;
+                    width: 85%;
+                    font-family: $secondaryFont;
+                    font-weight: 800;
+                    font-size: 0.75rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                }
+                &.swal2-cancel {
+                    background-color: $white;
+                    height: 35px;
+                    width: 85%;
+                    font-family: $secondaryFont;
+                    font-weight: 800;
+                    font-size: 0.75rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: $black;
+                    border: 1px solid $black;
+                }
+            }
+        }
+    }
+}

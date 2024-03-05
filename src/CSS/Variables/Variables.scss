@@ -1,0 +1,21 @@
+/* Dimensions */
+$viewport-increment: 1px;
+// Small Screens
+// We don't need a small screen breakpoint variable since small is from 0 to $mediumScreen
+// $smallScreen: 768px;
+
+// Medium Screens
+$mediumScreen: 770px;
+
+// Large Screens
+$largeScreen: 1025px;
+$xLargeScreen: 1200px;
+$xxLargeScreen: 1440px;
+$largeScreenLimit: 1680px;
+
+// Constraints
+$min: min-width;
+$max: max-width;
+
+// $assetsURL: 'arquivos/';
+$assetsURL: 'https://lagobo.vtexassets.com/arquivos/';

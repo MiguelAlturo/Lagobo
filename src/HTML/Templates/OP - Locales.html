@@ -1,0 +1,451 @@
+<!--
+ * Developed by Brandlive
+ * [brandlivecommerce.com]
+ *
+ * Based on:
+ * - Bootstrap v.3
+ * - VTEX Base Template [Home]
+ -->
+
+<!DOCTYPE html>
+<html
+    lang="es-CO"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce"
+>
+    <head>
+        <title>Lagobo Locales</title>
+        <vtex:metaTags />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/arquivos/favicon.ico" />
+        <vtex:template id="commonStyles" />
+        <vtex:template id="OP-CommonStyles" />
+
+        <!-- Google Maps API -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js?v=1.4.146.641"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJLq-9OQYQ6rIhkdkQXkiB2ZldBh5PLK4"></script>
+        <!-- Store Locator - Stores -->
+        <script type="text/javascript" src="/arquivos/locales.min.js"></script>
+        <script type="text/javascript" src="/arquivos/storeLocator.min.js"></script>
+    </head>
+
+    <body id="static-page">
+        <!-- SubTemplate: Header-menu -->
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div class="page">
+            <div class="container">
+                <div id="box-bread-brumb">
+                    <vtex.cmc:breadCrumb />
+                </div>
+                <section id="static-content">
+                    <div class="page-title col-xs-12">
+                        <h2>Nuestras tiendas</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 left">
+                        <div class="block-select">
+                            <h4>Seleccione un departamento</h4>
+                            <select id="prov">
+                                <option value="0">Departamento</option>
+                            </select>
+                            <!-- <select id="loc" disabled="disabled">
+                            <option value="0" disabled="disabled">Seleccionar localidad o barrio</option>
+                        </select> -->
+                        </div>
+                        <div class="locales">
+                            <ul>
+                                <div class="item mayorista" data-lat="3.5443266058534064" data-lng="-73.70859780798011" data-info="Sucursal 2">
+                                    <div class="number">OPORTUNIDADES No. 109</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 109</div>
+                                        <div class="address">CR 18 No. 13-20 Centro</div>
+                                        <div class="place">Meta - Granada</div>
+                                        <div class="more">Tel: 3205901900</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.151106901358681" data-lng="-73.6350418651497" data-info="Sucursal 3">
+                                    <div class="number">OPORTUNIDADES No. 111</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 111</div>
+                                        <div class="address">Cll 37 No.29 51-53 Centro</div>
+                                        <div class="place">Meta - Villavicencio</div>
+                                        <div class="more">Tel: 3138891449</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.08542128017436" data-lng="-72.95522717679164" data-info="Sucursal 4">
+                                    <div class="number">OPORTUNIDADES No. 115</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 115</div>
+                                        <div class="address">CL 6 No. 6-36 BRR Gaitán Centro</div>
+                                        <div class="place">Meta - Puerto Lopez</div>
+                                        <div class="more">Tel: 3138701358</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.982860012218922" data-lng="-75.60347690712747" data-info="Sucursal 5">
+                                    <div class="number">OPORTUNIDADES No. 117</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 117</div>
+                                        <div class="address">CR 8 No. 8-19 Centro</div>
+                                        <div class="place">Caldas - Chinchiní</div>
+                                        <div class="more">Tel: 3205910775 / (606) 8403488</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.086551502132794" data-lng="-76.19947670562749" data-info="Sucursal 6">
+                                    <div class="number">OPORTUNIDADES No. 123</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 123</div>
+                                        <div class="address">CL 25 No. 22-60 Centro</div>
+                                        <div class="place">Valle del Cauca - Tuluá</div>
+                                        <div class="more">Tel: 3205910618 / (602) 2245051</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.813978775294679" data-lng="-75.695521506753" data-info="Sucursal 7">
+                                    <div class="number">ELECTROFERTAS No. 124</div>
+                                    <div class="data">
+                                        <div class="title">ELECTROFERTAS No. 124</div>
+                                        <div class="address">CR 8 No. 20-16 Centro</div>
+                                        <div class="place">Risaralda - Pereira</div>
+                                        <div class="more">Tel: 3105216862 / (606) 3489156</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.814152351862689" data-lng="-75.69561117859297" data-info="Sucursal 8">
+                                    <div class="number">OPORTUNIDADES No. 125</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 125</div>
+                                        <div class="address">CR 8 No. 20-51 Centro</div>
+                                        <div class="place">Risaralda - Pereira</div>
+                                        <div class="more">Tel: 3127131621</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.535405009800659" data-lng="-75.67472787864097" data-info="Sucursal 9">
+                                    <div class="number">ELECTROFERTAS No. 132</div>
+                                    <div class="data">
+                                        <div class="title">ELECTROFERTAS No. 132</div>
+                                        <div class="address">CR 18 No.19-60 ED Almallas LC 103</div>
+                                        <div class="place">Quindio - Armenia</div>
+                                        <div class="more">Tel: 3166940216 / (606) 7413669</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.534632936803406" data-lng="-75.67411702066765" data-info="Sucursal 10">
+                                    <div class="number">OPORTUNIDADES No. 133</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 133</div>
+                                        <div class="address">CR 17 No. 19-48</div>
+                                        <div class="place">Quindio - Armenia</div>
+                                        <div class="more">Tel: 3128039680 / (606) 7344698</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="5.067884200847049" data-lng="-75.51645911165672" data-info="Sucursal 11">
+                                    <div class="number">OPORTUNIDADES No. 135</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 135</div>
+                                        <div class="address">CRA 22 No. 24 - 04. Local 101 Edificio San Fernando</div>
+                                        <div class="place">Caldas - Manizales</div>
+                                        <div class="more">Tel: 3134706987-31164014524 / (606) 8961631</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="5.4527219113860355" data-lng="-74.66239688167876" data-info="Sucursal 12">
+                                    <div class="number">OPORTUNIDADES No. 137</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 137</div>
+                                        <div class="address">Cra. 2 No. 13-25 centro</div>
+                                        <div class="place">Caldas - La Dorada</div>
+                                        <div class="more">Tel: 3204752081 / (606) 8370614</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="9.230040036003361" data-lng="-74.7442142243463" data-info="Sucursal 13">
+                                    <div class="number">OPORTUNIDADES No. 138</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 138</div>
+                                        <div class="address">Sector Centro CL 11 No.3-11 Calle del Colegio Piso 1</div>
+                                        <div class="place">Bolívar - Magangué</div>
+                                        <div class="more">Tel: 3167440008</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.610842948274594" data-lng="-72.9280451632974" data-info="Sucursal 14">
+                                    <div class="number">OPORTUNIDADES No. 139</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 139</div>
+                                        <div class="address">CL 11 No. 10-03 Barrio centro</div>
+                                        <div class="place">Casanare - Villanueva</div>
+                                        <div class="more">Tel: 3144701622</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.442268966793998" data-lng="-75.24062729646168" data-info="Sucursal 15">
+                                    <div class="number">OPORTUNIDADES No. 140</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 140</div>
+                                        <div class="address">CR. 2da. NO. 12 # 90 BRR CENTRO</div>
+                                        <div class="place">Tolima - Ibagué</div>
+                                        <div class="more">Tel: 3134699278 / (608) 2629369</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="9.301903444767799" data-lng="-75.38191765295626" data-info="Sucursal 16">
+                                    <div class="number">OPORTUNIDADES No. 141</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 141</div>
+                                        <div class="address">CL 28 No. 25B # 365. Guacarí parque comercial. LC 02246</div>
+                                        <div class="place">Sucre - Sincelejo</div>
+                                        <div class="more">Tel: 3214909261</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="8.757889430982004" data-lng="-75.88435698601644" data-info="Sucursal 17">
+                                    <div class="number">OPORTUNIDADES No. 142</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 142</div>
+                                        <div class="address">CL 32 No. 3-43 Centro</div>
+                                        <div class="place">Córdoba - Montería</div>
+                                        <div class="more">Tel: 3176679307</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="3.986148439141186" data-lng="-73.76148768926123" data-info="Sucursal 18">
+                                    <div class="number">OPORTUNIDADES No. 144</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 144</div>
+                                        <div class="address">CR 18 No. 13-35 Barrio centro</div>
+                                        <div class="place">Meta - Acacias</div>
+                                        <div class="more">Tel: 3134699274</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="1.8531455554501537" data-lng="-76.04658085373588" data-info="Sucursal 19">
+                                    <div class="number">OPORTUNIDADES No. 146</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 146</div>
+                                        <div class="address">CL 7 No. 5- 41 Primer piso</div>
+                                        <div class="place">Huila - Pitalito</div>
+                                        <div class="more">Tel: 3185216489 / (608) 8351380</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="2.1985583017975805" data-lng="-75.62832486837434" data-info="Sucursal 20">
+                                    <div class="number">OPORTUNIDADES No. 147</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 147</div>
+                                        <div class="address">CR 11 No. 8-36 LC Comercial</div>
+                                        <div class="place">Huila - Garzón</div>
+                                        <div class="more">Tel: 3112862595 / (608) 8331314</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="8.883851562020302" data-lng="-75.79237312489789" data-info="Sucursal 21">
+                                    <div class="number">OPORTUNIDADES No. 150</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 150</div>
+                                        <div class="address">CR15 No. 9A-30 LC 6 AV. Santader</div>
+                                        <div class="place">Córdoba - Cereté</div>
+                                        <div class="more">Tel: 3214903130 / (604) 7745401</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="2.934111" data-lng="-75.248611" data-info="Sucursal 22">
+                                    <div class="number">OPORTUNIDADES No. 151</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 151</div>
+                                        <div class="address">Calle 8 # 48-145 C.C. Santa Lucia (Local N2-21)</div>
+                                        <div class="place">Huila - Neiva</div>
+                                        <div class="more">Tel: 3174379633 / (608) 8650909</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.534613" data-lng="-75.674134" data-info="Sucursal 23">
+                                    <div class="number">OPORTUNIDADES No. 152</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 152</div>
+                                        <div class="address">CR 18 No. 20-00</div>
+                                        <div class="place">Quindio - Armenia</div>
+                                        <div class="more">Tel: 3102484523 / (606) 7362876</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="5.349063131774104" data-lng="-72.39999188033433" data-info="Sucursal 24">
+                                    <div class="number">OPORTUNIDADES No. 155</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 155</div>
+                                        <div class="address">CR 21 No. 8-31 Barrio centro</div>
+                                        <div class="place">Casanare - Yopal</div>
+                                        <div class="more">Tel: 3214909262-3142298945</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="4.153046204219261" data-lng="-74.88427068144759" data-info="Sucursal 25">
+                                    <div class="number">OPORTUNIDADES No. 158</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 158</div>
+                                        <div class="address">CR 4 No. 8-25</div>
+                                        <div class="place">Tolima - Espinal</div>
+                                        <div class="more">Tel: 3208650644</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat="5.197121572828137" data-lng="-74.89563959758948" data-info="Sucursal 26">
+                                    <div class="number">OPORTUNIDADES No. 159</div>
+                                    <div class="data">
+                                        <div class="title">OPORTUNIDADES No. 159</div>
+                                        <div class="address">CR 4 No. 7-37/39</div>
+                                        <div class="place">Tolima - Mariquita</div>
+                                        <div class="more">Tel: 3176666865</div>
+                                    </div>
+                                </div>
+
+                                <div class="item mayorista" data-lat=" -74.073667" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Bogota Centro</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Bogota Centro</div>
+                                        <div class="address">CLL. 17 # 8 - 62 C.C. UNICOMPRAS OF 203-204</div>
+                                        <div class="place">Cundinamarca - Bogotá Centro</div>
+                                        <div class="more">Tel: 3176975995 / 3134706952 / (601) 243 2302</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.674083" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Armenia</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Armenia</div>
+                                        <div class="address">CR 17 No. 19-48</div>
+                                        <div class="place">Quindío - Armenia</div>
+                                        <div class="more">Tel: 316 0266953 / 316 0266954</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -74.023583" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Bogota Norte</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Bogota Norte</div>
+                                        <div class="address">CR 7 No. 156 # 10 ED Krystal Piso 23-04</div>
+                                        <div class="place">Cundinamarca - Bogotá Norte</div>
+                                        <div class="more">Tel: 3138701355 / 3138701355 / (601) 3906900</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -73.122944" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Bucaramanga</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Bucaramanga</div>
+                                        <div class="address">CLL 35 # 19 - 41 OFC 117 Centro Internacional de Negocios La Triada</div>
+                                        <div class="place">Santander - Bucaramanga</div>
+                                        <div class="more">Tel: 3175860306 / 3105809845 / (607) 688 4745</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -76.531917" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Cali</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Cali</div>
+                                        <div class="address">CRA 4 # 12 - 41 OFC 211 Edificio Seguros Bolívar</div>
+                                        <div class="place">Valle de Cauca - Cali</div>
+                                        <div class="more">Tel: 312 842 9989 / 3174394020 / (602) 4871005</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -74.023583" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Canal Digital</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Canal Digital</div>
+                                        <div class="address">CR 7 No. 156 # 10 ED Krystal Piso 23-06</div>
+                                        <div class="place">Cundinamarca - Canal Digital</div>
+                                        <div class="more">Tel: 321 490 3129 / 3182392113 / (601) 3906900</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.240639" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Ibagué</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Ibagué</div>
+                                        <div class="address">CRA 2 # 12-90 Centro- Dentro del Almacen oportunidades</div>
+                                        <div class="place">Tolima - Ibagué</div>
+                                        <div class="more">Tel: 3164536024 / 3176976163 / (608) 276 1913</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.519278" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Manizales</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Manizales</div>
+                                        <div class="address">CRA. 22 # 19 - 17 Local 17i</div>
+                                        <div class="place">Caldas - Manizales</div>
+                                        <div class="more">Tel: 3214901941 / 3175106227 / (6) 882 8990</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.565722" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Medellín</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Medellín</div>
+                                        <div class="address">CRA 49 # 50 - 41 Local 115 CC Junín Candelaria</div>
+                                        <div class="place">Antioquia - Medellín</div>
+                                        <div class="more">Tel: 3204599822 / 3153644278 / (604) 511 3559</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.887472" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Montería</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Montería</div>
+                                        <div class="address">Cra 3 # 25 - 68 Centro</div>
+                                        <div class="place">Córdoba - Montería</div>
+                                        <div class="more">Tel: 3214903133 / 3166922635 / (604) 789 0247</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.248611" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Neiva</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Neiva</div>
+                                        <div class="address">Calle 8 # 48-145 C.C. Santa Lucia (Local 2-21)</div>
+                                        <div class="place">Huila - Neiva</div>
+                                        <div class="more">Tel: / 315 3679396</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.695528" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Pereira</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Pereira</div>
+                                        <div class="address">CRA. 8 # 20 - 51-Dentro del Almacen oportunidades</div>
+                                        <div class="place">Risaralda - Pereira</div>
+                                        <div class="more">Tel: 3203139307 / 3164783089 / (6) 335 8652</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -74.209389" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Santa Marta</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Santa Marta</div>
+                                        <div class="address">Calle 23 # 6 - 18 Local 23 Centro Comercial Plazuela 23</div>
+                                        <div class="place">Magdalena - Santa Marta</div>
+                                        <div class="more">Tel: 3172712894 / 3182194968 / (605) 4368247</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -75.395639" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Sincelejo</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Sincelejo</div>
+                                        <div class="address">Carrera 17 No 25 # 07 edificio México</div>
+                                        <div class="place">Sucre - Sincelejo</div>
+                                        <div class="more">Tel: 3173171704 / 3204752087 / (605) 281 4555</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -73.361694" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Tunja</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Tunja</div>
+                                        <div class="address">CRA 10 # 20 - 91 Ofc 214 CC El Virrey</div>
+                                        <div class="place">Boyacá - Tunja</div>
+                                        <div class="more">Tel: 3127770034 / 3204600563 / (608) 740 1719</div>
+                                    </div>
+                                </div>
+                                <div class="item mayorista" data-lat=" -73.635056" data-lng="" data-info="Sucursal 2">
+                                    <div class="number">Servicios Financieros Villavicencio</div>
+                                    <div class="data">
+                                        <div class="title">Servicios Financieros Villavicencio</div>
+                                        <div class="address">CALL 37 #29-51- Centro -Dentro del Almacen oportunidades</div>
+                                        <div class="place">Meta - Villavicencio</div>
+                                        <div class="more">Tel: 3204752084 / 3176976018 / (608) 662 8990</div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 right">
+                        <div id="map-canvas"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page -->
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+    </body>
+
+    <!-- Scripts -->
+    <vtex:template id="commonScripts" />
+    <vtex:template id="OP-CommonScripts" />
+    <script type="text/javascript">
+        jQuery('.sucursales-page .bread-crumb ul').append('<li class="last"><strong><a title="Locales" href="javascript:void(0)">Locales</a></strong></li>');
+    </script>
+</html>

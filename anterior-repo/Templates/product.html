@@ -1,0 +1,303 @@
+<!-- 
+  * Developed by Brandlive
+  * [brandlivecommerce.com]
+  * 
+  * Based on:
+  * - Bootstrap v.3
+  * - VTEX Base Template [Product]
+  -->
+  <!DOCTYPE html>
+  <html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+      <title>Lagobo Products</title>
+      <vtex.cmc:productRichSnippets showFacebook="true" />
+      <meta property="og:image:width" content="500" />
+      <meta property="og:image:height" content="500" />
+      <vtex:metaTags/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="/arquivos/favicon.ico"/>
+      <vtex:template id="commonStyles" />
+      <style>
+      .quantity-selector-container .unitSelector{
+          display:none !important;
+      }
+      .quantity-selector-container .quantitySelector{
+          display:block !important;
+      }
+  </style>
+    </head>
+    <body id="product-page">
+      <!--<div class="attributes-wrapper">-->
+      <!--  Component: Specification -->
+      <!--    <vtex.cmc:productSpecification />-->
+      <!--</div>-->
+      <!-- attributes-wrapper -->
+      <div class="header_menu">
+        <vtex:template id="Header" />
+        <vtex:template id="Menu-new" />
+      </div>
+      <div class="page">
+        <section id="product-content">
+          <div class="container">
+            <div id="box-bread-brumb">
+              <vtex.cmc:breadCrumb />
+            </div>
+            <!-- BreadCrumbs -->
+            <div class="product-details">
+              <div class="product-image">
+                <vtex.cmc:ProductImage zoom="on" />
+                <span class="brand">
+                  <vtex.cmc:brandName/>
+                </span>
+                <div class="cleaned-price"> </div>
+                <!--<span class="exclusivo-web" style="display: none;">
+                  <img src="/arquivos/exclusivo_web.png" alt="exclusivo-web" />
+                  </span>-->
+                  <div class="wrapper-cucardas">
+                      <vtex.cmc:HightLight/>
+                  </div>
+              </div>
+              <!-- .product-image -->
+              <div class="product-info">
+                <div class="product-name">
+                  <h1>
+                    <vtex.cmc:productName />
+                  </h1>
+                </div>
+                <!-- .product-name -->
+                <!--<div class="col-xs-12">-->
+                <!--  <div class="short-description">-->
+                <!--    <vtex.cmc:productDescriptionShort />-->
+                <!--  </div>-->
+                <!--  <div class="avaliacoes">-->
+                <!--    <a href="#reviews" class="link-ancora">-->
+                <!--      <vtex.cmc:evaluationRate/>-->
+                <!--    </a>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <div class="sku-selector-box">
+                  <vtex.cmc:skuSelection />
+                </div>
+                <!-- .seletor-sku -->
+                <div class="price-box">
+                  <!--  Component: Price -->
+                  <vtex.cmc:skuPrice />
+                  <div class="cleaned-price">
+                    <span class="listPrice"></span>
+                    <span class="bestPrice"></span>
+                    <span class="percent"></span>
+                    <div class="product-third-price" style="display: none;">
+                    </div>
+                  </div>
+                </div>
+                <!-- .price-box -->
+                <div class="tag_envio_gratis">
+                  <vtex:contentPlaceHolder id="enviogratistag" />
+                </div>
+                <div class="buy-button-box">
+                  <!--<vtex.cmc:BuyInPage/>-->
+                  <!--<vtex.cmc:BuyButton />-->
+                  <vtex.cmc:stockKeepingUnitAmountAndUnitSelection />
+                  <vtex.cmc:BuyInPage/>
+                </div>
+                <!--<div id="callToBack">
+                  <div class="col-lg-12 col-xs-12">
+                      <div class="mobileImage hidden-lg hidden-md">
+                          <a href="https://www.libranzaoportunidades.com/formulario-libranza">
+                              <img src="/arquivos/boton-libranza-2020.png"/>
+                          </a>
+                      </div>
+                      <div class="DesktopImage hidden-xs hidden-sm">
+                          <a href="https://www.libranzaoportunidades.com/formulario-libranza">
+                              <img src="/arquivos/boton-libranza-2020.png"/>
+                          </a>
+                      </div>
+                  </div>
+                </div>-->
+                <div class="button-box-credit" style="display:none;">
+                  <div class="pidelo-a-credito">
+                    <a href="">Pídelo a Crédito</a>
+                  </div>
+                </div>
+                <div id="tablaEnvios">
+                  <vtex.cmc:envios />
+                </div>
+                <div id="Metodos-pago">
+                  <div class="payment-methods">
+                    <div class="title">Medios de pagos</div>
+                    <ul class="methods">
+                      <li data-toggle="tooltip" title="Visa, Mastercard, American Express, Diners"><span class="font-icn creditcard"></span>
+                       <span class="text">
+                        Tarjeta de
+                        Crédito
+                        </span>
+                      </li>
+                      <li data-toggle="tooltip" title="Pago en línea con tarjeta débito"><span class="icn pse"></span>
+                      <span class="text">
+                        PSE 
+                        tarjeta débito
+                        </span>
+                      </li>
+                      <li data-toggle="tooltip" title="Pago con tarjeta codensa"><span class="icn codensa"></span>
+                      <span class="text">
+                        Crédito
+                        Codensa
+                        </span>
+                      </li>
+                      <li data-toggle="tooltip" title="Efecty, Baloto y consignación"><span class="icn efecty"></span>
+                      <span class="text">
+                        Efecty, Baloto
+                        o Consignación
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="description-block col-xs-12 col-md-7" style="display:none;">
+                  <span class="arrowUp"></span>
+                  <h2>
+                    <vtex.cmc:productDescriptionShort />
+                  </h2>
+                  <vtex.cmc:ProductDescription />
+                  <span class="shadow"></span>
+                </div>
+                <!-- .description -->
+                <div class="col-xs-12">
+                  <div id="co_message_loading" class="alert alert-info" style="display:none;">Cargando...</div>
+                  <div id="co_message_validate" class="alert alert-warning" style="display:none;">Complete correctamente todos los campos del formulario.</div>
+                  <div id="co_message_success" class="alert alert-success" style="display:none;">Formulario enviado con éxito. En breve nuestro equipo entrará en contacto con usted. Muchas gracias.</div>
+                  <div id="co_message_error" class="alert alert-danger" style="display:none;">Ocurrió un error. Intente nuevamente mas tarde.</div>
+                </div>
+                <!--<div class="call-button-box">
+                  <div class="text-button"><img src="/arquivos/televentas2.png"/>te llamamos</div>
+                  <form class="col-xs-12" id="contacto_form" action="javascript:FormValidate();" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+                    <div style="display:none;">
+                      <input type="hidden" id="master_data_store_name" name="master_data_store_name" value="qualityproducts" />
+                      <input type="hidden" id="master_data_data_entity" name="master_data_data_entity" value="PP" />
+                    </div>
+                    <ul class="fila col-xs-12">
+                      <div class="close"><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+                      <h4>Ingresa tus datos para recibir atención telefónica:</h4>
+                      <li class="input col-xs-12">
+                        <label for="telefono">Teléfono</label>
+                        <input id="telefono" name="telefono" type="text" value="" size="30" />
+                        <div class="button_contact col-xs-12 col-sm-6">
+                          <input type="submit" id="btn-submit" name="btn-submit" value="Enviar" />
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
+                </div>-->
+                <div class="opinion-destacada"></div>
+              </div>
+              <!-- .product-info -->
+            </div>
+            <div class="extra-information">
+              <div class="video-block col-xs-12 col-md-7">
+                <h2>Mira un video!</h2>
+              </div>
+              <!-- .text HTML (productvideo)-->
+              <div class="specification-block col-xs-12 col-md-7" style="display:none;">
+                <h2>Especificaciones</h2>
+                <div id="specification">
+                  <vtex.cmc:productSpecification />
+                </div>
+              </div>
+              <!-- .text HTML -->
+              <div class="opinion-block col-xs-12" style="display:none;">
+                <h2>Dejanos tu opinión!</h2>
+                <div id="reviews" class="rating">
+                   <vtex.cmc:UserReview/> 
+                  <vtex.cmc:welcomeMessage/>
+                </div>
+              </div>
+              <div class="row" id="tabsDescripcion">
+                <div class="col-md-12">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab">Descripción</a></li>
+                    <li role="presentation"><a href="#especificaciones" aria-controls="especificaciones" role="tab" data-toggle="tab">Especificaciones</a></li>
+                    <!--<li role="presentation"><a href="#ratings" aria-controls="ratings" role="tab" data-toggle="tab">Ratings</a></li>-->
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="descripcion">
+                      <h2>
+                        <vtex.cmc:productDescriptionShort />
+                      </h2>
+                      <vtex.cmc:ProductDescription />
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="especificaciones">
+                      <h2>Especificaciones</h2>
+                      <div id="specification">
+                        <vtex.cmc:productSpecification />
+                      </div>
+                    </div>
+                    <!--<div role="tabpanel" class="tab-pane" id="ratings">-->
+                    <!--  <h2>Dejanos tu opinión!</h2>-->
+                    <!--  <div id="reviews" class="rating">-->
+                    <!--    <vtex.cmc:UserReview/>-->
+                    <!--  </div>-->
+                    <!--</div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .product-opinion -->
+            <div id="product-related">
+              <div class="interesarte col-xs-12 showcase-owl">
+                <vtex:contentPlaceHolder id="Quem-viu-viu-tambem" />
+              </div>
+            </div>
+            <!--vitrina escondida necesaria para el comparador únicamente en el home y pdp -->
+            <aside id="vitrinaescondida" style="opacity:0;height: 0;display:none;">
+              <vtex.cmc:searchResult layout="72afc598-64f8-4868-aaae-5912e953fc59" itemCount="2"  columnCount="4" />
+            </aside>
+          </div>
+          <!-- .product-details -->
+        </section>
+        <!-- #product-content -->
+      </div>
+      <vtex:template id="Footer" />
+      <!--  SubTemplate: Footer -->
+    </body>
+    <!--bloque fancy seguir comprando-->
+    <div class="lightbox-wrapper">
+      <div id="seguircomprando-lightbox" class="lightbox-box">
+        <div class="content">
+          <span class="close"></span>
+          <div class="lightbox-close"></div>
+          <div class="col-md-5">
+            <img src="/arquivos/img_cart-products.png" alt="" />
+          </div>
+          <div class="col-md-7">
+            <div id="seguircomprando">
+              <img src="/arquivos/img_icon-good.png" alt="" />
+              <h3>Producto agregado<br />a tu carrito.</h3>
+              <div class="botones-sigacomprando">
+                <a href="javascript:void(0);" class="btn_siga">Seguir comprando</a>
+                <a href="/checkout/#/cart" class="cartCheckout">Finalizar compra</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<vtex.cmc:colortable />-->
+    <!-- Comparative color table -->
+    <vtex:template id="commonScripts" />
+    <!-- <script src="/arquivos/atMasterData.js"></script> -->
+    <!-- <script src="/arquivos/jquery.form.js"></script> -->
+    <script type="text/javascript">
+      let metadata = {
+          /* Optional: if you need to send metadata put it here */
+      };
+      
+      let callback = function () {
+          /* Optional: if you need to call a function after tracking put it here */
+      }
+      
+      WU.trackProductVTEX('nAX43vPyG', metadata, callback);
+      
+    </script>
+  </html>

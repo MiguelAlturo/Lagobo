@@ -1,0 +1,50 @@
+<script id="search-engine-template" type="text/x-handlebars-template">
+    {{#eq totalCount 0}}
+        <div></div>
+        <div id="loader-search-engine">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+    {{else}}
+        <ul class="historySearchResult">
+            {{#each historySearchResult}}
+                <li data-link="{{link}}" data-name="{{name}}">
+                    <label>
+                        {{name}}
+                    </label>
+                </li>
+            {{/each}}
+        </ul>
+        <ul class="itemsSearchResult">
+            {{#each itemsSearchResult}}
+                <li data-link="{{link}}" data-name="{{name}}">
+                    <label>
+                        {{name}}
+                    </label>
+                </li>
+            {{/each}}
+        </ul>
+        {{#eq categoriesSearchResult 0}}
+            <div></div>
+        {{else}}
+            <hr />
+            <h5 class="categoriesTitle">
+                Categorias
+            </h5>
+            <ul class="categoriesSearchResult">
+                {{#each categoriesSearchResult}}
+                    <li data-link="{{link}}?PS=12&O=OrderByNameASC" data-name="{{name}}" data-context="{{context}}">
+                        <label>
+                            <strong>
+                                {{name}}
+                            </strong>
+                            en {{context}}
+                        </label>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/eq}}
+    {{/eq}}
+    <div id="loader-search-engine">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+</script>

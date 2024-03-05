@@ -1,0 +1,154 @@
+#search-engine-input {
+    border: none;
+    background: transparent;
+    color: $darkBlue;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: $primaryFont;
+    padding: 5px 10px;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        font-size: 1rem;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        color: $darkBlue;
+    }
+}
+
+.OPIcon-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 35px;
+    color: $white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    background-color: $darkBlue;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+
+    @media only screen and (max-width: 900px) {
+        width: 60px;
+        height: 40px;
+        font-size: 20px;
+        border: none;
+        position: unset;
+        transform: unset;
+        border-radius: 0;
+        color: $white;
+    }
+
+    @media only screen and (max-width: 767px) {
+        width: 60px;
+        height: 40px;
+        position: unset;
+        transform: unset;
+        color: $white;
+    }
+
+    &::before {
+        font-weight: bold;
+    }
+}
+
+#searchInputResultList {
+    display: none;
+    position: fixed;
+    top: 110px;
+    left: calc(50% - 300px);
+    margin: 0;
+    background: $white;
+    color: $darkBlue;
+    z-index: 10;
+    padding: 10px 20px;
+    overflow-y: auto;
+    max-height: calc(95vh - 110px);
+    min-height: 20px;
+    width: 600px;
+
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 60px;
+        position: absolute;
+        max-height: calc(95vh - 150px);
+    }
+
+    @media only screen and (max-width: 767px) {
+        top: 40px;
+    }
+
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 8px 15px;
+            color: $darkBlue;
+            display: flex;
+            align-items: center;
+
+            label {
+                font-family: $secondaryFont;
+                font-size: 0.75rem;
+                text-decoration: none;
+                color: $darkBlue;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 100%;
+
+                @media only screen and (min-width: 740px) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            &:hover {
+                background: $lighterBlue;
+                cursor: pointer;
+                color: $darkBlue;
+
+                label {
+                    cursor: pointer;
+                    color: $darkBlue;
+                }
+            }
+        }
+
+        &.historySearchResult li:before {
+            content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi43ODMiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMi43ODMgMTIiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICM5Mjk4OWI7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJHcnVwb18zOCIgZGF0YS1uYW1lPSJHcnVwbyAzOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQzLjYwOSAtODQpIj4KICAgIDxwYXRoIGlkPSJUcmF6YWRvXzUzIiBkYXRhLW5hbWU9IlRyYXphZG8gNTMiIGNsYXNzPSJjbHMtMSIgZD0iTTQ5LjEsODRhNS43MDksNS43MDksMCwwLDAtLjc1OC4xbC4yLjc2MmE0LjkxMiw0LjkxMiwwLDAsMSwuNTU5LS4wNzdabS43NjYsMHYuNzgzYTQuOTMzLDQuOTMzLDAsMCwxLC41NjIuOP3bC4yLS43NjJBNS43OTEsNS43OTEsMCwwLDAsNDkuODY1LDg0Wm0tMi4yNjYuM2E1LjgyNiw1LjgyNiwwLDAsMC0uNzA5LjNsLjM4Ny42ODVhNC44LDQuOCwwLDAsMSwuNTIyLS4yMlptMy43NjYsMC0uMi43NjJBNS4yMSw1LjIxLDAsMCwxLDU0LjYsOTBhNS4zNzMsNS4zNzMsMCwwLDEtLjE0MywxLjIxOUw1My4zMTcsOTAuMmEuMzc1LjM3NSwwLDAsMC0uMjg1LS4wOTQuMzg3LjM4NywwLDAsMC0uMzQzLjMxNGwtLjc3LDMuOTIxYS4zOTIuMzkyLDAsMCwwLC4zMDYuNDU5LjM4MS4zODEsMCwwLDAsLjE5NS0uMDE1bDMuNzA5LTEuM2EuNC40LDAsMCwwLC4xMy0uNjY4TDU1LjEsOTEuNzg1QTYuMTQxLDYuMTQxLDAsMCwwLDU1LjM2Nyw5MGE2LjAxNCw2LjAxNCwwLDAsMC00LTUuN1pNNDYuMjMsODVhNi4xMjUsNi4xMjUsMCwwLDAtLjYxNi40NzJsLjU0Mi41NTFhNC45OTIsNC45OTIsMCwwLDEsLjQ1Ny0uMzQ3Wm0tMS4xNTQsMS4wMjdhNi4yMDksNi4yMDksMCwwLDAtLjQ3My42MTlsLjY2NS4zODhhNS4xMTEsNS4xMTEsMCwwLDEsLjM0Ni0uNDUzWm00LjEyOS41NzRWODkuNzZsLTIuNzQzLDEuNTgxLjM5MS42ODEsMi44Mi0xLjYyN2EuMzkxLjM5MSwwLDAsMCwuMzE0LS4zODMuMi4yLDAsMCwwLDAtLjAyNGgwVjg2LjZabS00Ljk4OS43MjJhNS45NzcsNS45NzcsMCwwLDAtLjI5My43MjFsLjczMy4yYTUuMzM0LDUuMzM0LDAsMCwxLC4yMjUtLjUzNFptLS41LDEuNDg0YTYuMiw2LjIsMCwwLDAtLjEuNzc4aC43N0E1LjE5Miw1LjE5MiwwLDAsMSw0NC40NTcsODlabS0uMTA2LDEuNTY1YTYuMTkzLDYuMTkzLDAsMCwwLC4xLjc3OGwuNzQyLS4yYTUuMTg4LDUuMTg4LDAsMCwxLS4wNy0uNTc1Wm05LjcuODY0LDEuOTQ0LDEuNzI4LTIuNDU0Ljg2OC41MS0yLjZaTTQ0LjY0LDkxLjdsLS43MzguMjA4YTYuMTQ1LDYuMTQ1LDAsMCwwLC4yOS43MjlsLjY2NC0uMzkxQTUuMzg4LDUuMzg4LDAsMCwxLDQ0LjY0LDkxLjdabS42LDEuMjI3LS42NjQuMzkxYTYuOP5LDYuOP5LDAsMCwwLC40NzMuNjMybC41NDItLjU1NUE1LjE5LDUuMTksMCwwLDEsNDUuMjM5LDkyLjkyN1ptLjg5MywxLjAyNy0uNTM4LjU1YTUuOTM2LDUuOTM2LDAsMCwwLC42MTEuNDg1bC4zODMtLjY3N2E0LjkxNiw0LjkxNiwwLDAsMS0uNDU2LS4zNThabTEuMTIxLjc1LS4zODQuNjg1YTUuODM4LDUuODM4LDAsMCwwLC43MTguMzA1bC4xOTUtLjc2NkE1LjA1NCw1LjA1NCwwLDAsMSw0Ny4yNTMsOTQuN1ptMS4yNzUuNDI4LS4yLjc2MkE1LjYwOSw1LjYwOSwwLDAsMCw0OS4xLDk2di0uNzg3YTQuODc1LDQuODc1LDAsMCwxLS41NzEtLjA4MVoiLz4KICA8L2c+Cjwvc3ZnPgo=');
+            margin-right: 11px;
+        }
+
+        &.itemsSearchResult li:before {
+            content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjOTI5ODliOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0iVHJhemFkb183MCIgZGF0YS1uYW1lPSJUcmF6YWRvIDcwIiBjbGFzcz0iY2xzLTEiIGQ9Ik05MzAuODcyLDMwLjQzYTQuODExLDQuODExLDAsMSwwLTEuODk0LDMuODI2bDMuMzY0LDMuMzYzLjkwNy0uOTA3LTMuMzY0LTMuMzYzQTQuNzkxLDQuNzkxLDAsMCwwLDkzMC44NzIsMzAuNDNabS00LjgxMSwzLjUyOGEzLjUyOCwzLjUyOCwwLDEsMSwzLjUyOC0zLjUyOEEzLjUyOCwzLjUyOCwwLDAsMSw5MjYuMDYxLDMzLjk1OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05MjEuMjUgLTI1LjYxOSkiLz4KPC9zdmc+Cg==');
+            margin-right: 11px;
+        }
+    }
+
+    hr {
+        margin: 15px;
+        background-color: $darkBlue;
+        border: none;
+        height: 1px;
+        color: $darkBlue;
+    }
+
+    .categoriesTitle {
+        margin: 10px 40px;
+        font-weight: normal;
+        font-size: 11px;
+    }
+
+    .categoriesSearchResult li {
+        padding: 8px 40px;
+    }
+}

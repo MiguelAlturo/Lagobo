@@ -1,0 +1,58 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v2.0
+*
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <vtex:metaTags />
+        <title>Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar</title>
+        <vtex:template id="OP-CommonStyles" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <vtex:contentPlaceHolder id="formCSS" />
+        <link rel="stylesheet" href="https://lagobo.vtexassets.com/arquivos/OP-Formulario.min.css?v=22.05.2022-2" />
+    </head>
+
+    <body id="libranza">
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <!--  Content -->
+        <section class="slider banner">
+            <div class="boxBanner">
+                <vtex:contentPlaceHolder id="banner-principal" />
+            </div>
+        </section>
+
+        <section class="page_title">
+            <div class="title">
+                <vtex:contentPlaceHolder id="title" />
+            </div>
+        </section>
+
+        <section class="form-section">
+            <vtex:contentPlaceHolder id="Form-Data" />
+        </section>
+        
+        <section class="promos">
+            <div class="grid-container">
+                <vtex:contentPlaceHolder id="Promo Content" />
+            </div>
+        </section>
+
+        <!-- /Content -->
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+        <!-- /SubTemplate: Footer -->
+    </body>
+    <vtex:template id="OP-CommonScripts" />
+    <script src="https://lagobo.vtexassets.com/arquivos/OP-Formulario.min.js?v=22.05.2022-2"></script>
+    <vtex:contentPlaceHolder id="formJS" />
+</html>

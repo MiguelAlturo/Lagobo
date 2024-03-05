@@ -1,0 +1,62 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v2.0
+*
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <vtex:metaTags />
+        <title>Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar</title>
+        <vtex:template id="OP-CommonStyles" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="https://lagobo.vtexassets.com/arquivos/OP-Libranza.min.css?v=03.11.2021" />
+    </head>
+
+    <body id="libranza">
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <!--  Content -->
+        <section class="slider banner">
+            <vtex:contentPlaceHolder id="banner-principal" />
+        </section>
+
+        <section class="texto-video">
+            <div class="text">
+                <vtex:contentPlaceHolder id="texto-lateral" />
+            </div>
+            <div class="video">
+                <vtex:contentPlaceHolder id="video-lateral" />
+            </div>
+        </section>
+        <section class="carrusel">
+            <div class="carrusel-container">
+                <vtex:contentPlaceHolder id="carrusel-principal" />
+            </div>
+        </section>
+
+        <section class="banner-form">
+            <div class="banner-form">
+                <vtex:contentPlaceHolder id="banner-form" />
+            </div>
+        </section>
+
+        <section class="form-section">
+            <vtex:contentPlaceHolder id="Form-Libranza" />
+        </section>
+
+        <!-- /Content -->
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+        <!-- /SubTemplate: Footer -->
+    </body>
+    <vtex:template id="OP-CommonScripts" />
+    <script src="https://lagobo.vtexassets.com/arquivos/OP-Libranza.min.js?v=10.12.2021"></script>
+</html>

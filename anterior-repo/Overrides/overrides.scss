@@ -1,0 +1,201 @@
+//VITRINAS OVERRIDES
+.prateleira{
+    &.vitrine{
+        ul{
+            li{
+                .productImage{
+                    .wrapper-cucardas{
+                        width: 100%;
+                        p{
+                            &.flag{
+                                &.descuento---pichincha{
+                                    display: none;
+                                }
+                                &.preventa{
+                                    font-size: 0;
+                                    background-color: transparent;
+                                    border: 0;
+                                    background-image: url(/arquivos/cashback-244.png);
+                                    width: 120px;
+                                    height: 60px;
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    margin: 0;
+                                    padding: 0;
+                                    left: 10px;
+                                    &::after {
+                                        border: 0;
+                                    }
+                                    &::before {
+                                        border: 0;
+                                        background: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .data{
+                    .product-price{
+                        .product-third-price {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 10px auto;
+                            .promo-img {
+                                margin-right: 10px;
+                                img {
+                                    max-width: 30px;
+                                }
+                            }
+                            .promo-price {
+                                text-align: left;
+                                .third-price {
+                                    font-size: 15px;
+                                    color: #ee1d23;
+                                    font-weight: bold;
+                                }
+                                a {
+                                    font-size: 15px;
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*FLOATING WHATSAPP*/
+
+.floating-buttons {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: fixed;
+    right: 10px;
+    bottom: 30%;
+    z-index: 2;
+    .item {
+        border: 1px solid #FAD131;
+        min-width: 50px;
+        max-width: 50px;
+        height: 50px;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 2px;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        transition: all .5s;
+        color: #000000;
+        &:hover{
+            width: auto;
+            max-width: 300px;
+            padding: 0 10px;
+            p{
+                opacity: 1;
+                visibility: visible;
+                max-width: 100%;
+                margin-left: 10px;
+            }
+        }
+        a {
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            text-decoration: none;
+            overflow: hidden;
+            span{
+                &::before{
+                    color: #000000;
+                    font-size: 25px;
+                }
+            }
+            p{
+                max-width: 0;
+                opacity: 0;
+                visibility: hidden;
+                font-size: 14px;
+                color: #000000;
+                transition: opacity 0.5;
+            }
+        }
+    }
+}
+
+//PRODUCTO OVERRIDES
+#product-page{
+    .product-details{
+        .product-image{
+            .wrapper-cucardas{
+                p{
+                    &.flag{
+                        &.descuento---pichincha{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .product-info{
+            .price-box{
+                display: flex;
+                flex-wrap: wrap;
+                .product-third-price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin: 10px auto;
+                    width: 100%;
+                    .promo-img {
+                        margin-right: 10px;
+                        img {
+                            max-width: 40px;
+                        }
+                    }
+                    .promo-price {
+                        text-align: left;
+                        .third-price {
+                            font-size: 24px;
+                            color: #ee1d23;
+                            font-weight: bold;
+                        }
+                        a {
+                            font-size: 15px;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 5%;
+    img {
+        max-width: 250px;
+        height: auto;
+    }
+}

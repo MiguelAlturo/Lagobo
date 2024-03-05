@@ -1,0 +1,178 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v1.0
+*
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar</title>
+        <vtex:metaTags />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <vtex.cmc:productRichSnippets showFacebook="true" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <vtex:template id="OP-CommonStyles" />
+        <link rel="stylesheet" href="https://lagobo.vtexassets.com/arquivos/easyzoom.css" />
+        <link rel="stylesheet" href="https://lagobo.vtexassets.com/arquivos/OP-Producto.min.css?v=05.10.2023" />
+        <vtex:contentPlaceHolder id="CustomCSS" />
+    </head>
+
+    <body id="producto">
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <section id="product-content">
+            <div class="container">
+                <!-- BreadCrumbs -->
+                <div class="product-details">
+                    <div class="product-info mobile">
+                        <div id="box-bread-brumb">
+                            <vtex.cmc:breadCrumb />
+                        </div>
+                        <div class="product-name">
+                            <vtex.cmc:productName />
+                        </div>
+                        <div class="product-brand-reference">
+                            <div class="product-reference">SKU: <vtex.cmc:skuReference /></div>
+                            <div class="product-brand">
+                                <vtex.cmc:brandName />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <div class="thumbs-container"></div>
+                        <div class="image-container"></div>
+                        <div class="cleaned-price"></div>
+                        <div class="hightlight-colection">
+                            <vtex.cmc:HightLight />
+                        </div>
+                    </div>
+                    <!-- .product-image -->
+                    <div class="product-data">
+                        <div class="product-info desktop">
+                            <div id="box-bread-brumb">
+                                <vtex.cmc:breadCrumb />
+                            </div>
+                            <div class="product-name">
+                                <h1>
+                                    <vtex.cmc:productName />
+                                </h1>
+                            </div>
+                            <div class="product-brand-reference">
+                                <div class="product-reference">SKU: <vtex.cmc:skuReference /></div>
+                                <div class="product-brand">
+                                    <vtex.cmc:brandName />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <!-- .seletor-sku -->
+                            <div class="sku-selector-box">
+                                <vtex.cmc:skuSelection />
+                            </div>
+                            <div class="price-box">
+                                <!--  Component: Price -->
+                                <vtex.cmc:skuPrice />
+                                <div class="cleaned-price">
+                                    <span class="listPrice"></span>
+                                    <span class="bestPrice"></span>
+                                    <span class="percent"></span>
+                                    <div class="product-third-price" style="display: none"></div>
+                                </div>
+                            </div>
+                            <!-- .price-box -->
+                            <div class="tag_envio_gratis">
+                                <vtex:contentPlaceHolder id="enviogratistag" />
+                            </div>
+                            <div class="buy-button-box">
+                                <div class="qty">
+                                    <vtex.cmc:stockKeepingUnitAmountAndUnitSelection />
+                                </div>
+                                <div class="buy-button">
+                                    <a class="buy-in-page-button" style="display: block">AGREGAR AL CARRITO</a>
+                                    <a class="product-unavailable" style="display: none">Producto no disponible</a>
+                                </div>
+                                <div class="cuotas-button">
+                                    <a href="https://api.whatsapp.com/send?phone=573174385209" target="_blank">
+                                        LLÉVALO POR LIBRANZA <span>*Solo para pensionados</span></a
+                                    >
+                                </div>
+                            </div>
+                            <div id="tablaEnvios">
+                                <div class="title">Calcula tu envío</div>
+                                <vtex.cmc:envios />
+                            </div>
+                            <div class="payment-methods">
+                                <div class="title">Métodos de pago</div>
+                                <div class="payment">
+                                    <img src="/arquivos/medios-de-pago-15-10-23.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="description-block" style="display: none">
+                                <span class="arrowUp"></span>
+                                <h2>
+                                    <vtex.cmc:productDescriptionShort />
+                                </h2>
+                                <vtex.cmc:ProductDescription />
+                                <span class="shadow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .product-info -->
+                </div>
+                <div class="extra-information">
+                    <div class="row" id="tabsDescripcion">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#descripcion" aria-controls="descripcion" role="tab" data-toggle="tab">Descripción</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#especificaciones" aria-controls="especificaciones" role="tab" data-toggle="tab">Especificaciones</a>
+                            </li>
+                            <!--<li role="presentation"><a href="#ratings" aria-controls="ratings" role="tab" data-toggle="tab">Ratings</a></li>-->
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="descripcion">
+                                <h2>
+                                    <vtex.cmc:productDescriptionShort />
+                                </h2>
+                                <vtex.cmc:ProductDescription />
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="especificaciones">
+                                <h2>Especificaciones</h2>
+                                <div id="specification">
+                                    <vtex.cmc:productSpecification />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="flix-inpage"></div>
+                    <syndigo-powerpage pageid=""></syndigo-powerpage>
+                    <div id="mabe-inpage"></div>
+                </div>
+                <!-- .product-opinion -->
+                <div id="product-related">
+                    <div class="interesarte col-xs-12 showcase-owl">
+                        <vtex:contentPlaceHolder id="Te puede interesar" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+        <!-- /SubTemplate: Footer -->
+    </body>
+    <vtex:template id="OP-CommonScripts" />
+    <script src="https://lagobo.vtexassets.com/arquivos/easyzoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/RodriguezJose92/implementationMudiPDP@latest/ModuleMudi.js"></script>
+    <script src="https://lagobo.vtexassets.com/arquivos/OP-Producto.min.js?v=13.12.2023"></script>
+</html>

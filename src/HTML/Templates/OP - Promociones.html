@@ -1,0 +1,43 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v1.0
+*
+-->
+<!DOCTYPE html>
+<html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:contentPlaceHolder id="Meta-SEO" />
+    <title>Lagobo</title>
+    <vtex:metaTags/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/arquivos/favicon.ico"/>
+    <vtex:template id="OP-CommonStyles" />
+    <link href="https://lagobo.vtexassets.com/arquivos/OP-Promociones.min.css?v=09.10.2021" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body id="promo-page">
+    <!--  SubTemplate: Header -->
+    <vtex:template id="OP-Header" />
+    <!-- /SubTemplate: Header -->
+    <div class="page">
+        <section class="slider banner">
+            <div class="boxBanner">
+                <vtex:contentPlaceHolder id="Banner Principal" />
+            </div>
+        </section>
+        <div class="grid-container">
+            <vtex:contentPlaceHolder id="Promo Content" />
+        </div>
+    </div>
+    <!--  SubTemplate: Footer -->
+    <vtex:template id="OP-Footer" />
+
+</body>
+    <script src="https://lagobo.vtexassets.com/arquivos/OP-Promociones.min.js?v=27.10.2021"></script>
+    <vtex:template id="OP-CommonScripts" />
+</html>

@@ -1,0 +1,132 @@
+<!-- Class: product-list -->
+#set($id = $product.Id)
+#set($link = $product.Uri)
+#set($name = $product.HtmlEscapedName)
+#set($image = $product.GetImageTag(2))
+#set($description = $product.DescriptionShort)
+#set($brand = $product.BrandName)
+#set($cucarda = $product.ProductField(36))
+#set ($porcentaje=$atributo)
+
+
+#if ($product.IsInStock)
+<div id="product-$id" class="box-item">
+#else
+<div class="box-item product-off" id="product-$id">
+#end
+    <span id='productID-oculto' style="display:none;">$id</span>
+    <div class="productImage">
+        <span id="$brand" class="brand"><img id="" src="/arquivos/samsung.png"  alt="brand" /></span>
+        #if ($product.HasBestPrice)
+        <span class="cucarda"style="display:none;">Off</span>
+        <div class="cucarda">
+           <span>Off</span>
+        </div>
+
+        #end
+        <!-- <span class="product-new">$cucarda</span> -->
+        <div class="box-product"><a title="$name" href="$link">$image</a></div>
+         <div class="quickview">$product.QuickView</div>
+        <div class="comparator"> $product.Compare</div>
+        <div class="wrapper-cucardas">
+            $product.HightLight
+        </div>
+    </div>
+
+    <div class="data">
+        <a title="$name" href="$link" class="product-name">$name</a>
+        <!-- <div class="product-description">$description</div> -->
+        #if($product.IsInStock)
+        <div class="product-price">
+            #if ($product.HasBestPrice)
+            <span class="oldPrice">
+                $product.ListPrice
+            </span>
+            <span class="bestPrice sale">
+                $product.BestPrice
+            </span>
+             <!--<span class="cucarda">Off</span>-->
+            #else
+            <span class="bestPrice">
+                $product.BestPrice
+            </span>
+            #end
+            <div class="product-third-price" style="display: none;">
+            </div>
+        </div>
+        #end
+        <!-- <a href="$link" class="exclusivo-web"><img id="" src="/arquivos/exclusivo_web.png"  alt="exclusivo-web" /></a>-->
+    </div><!-- product-info -->
+    <!--
+    $product.BottomBuyAsynchronous
+    -->
+    <div class="wrapper-buy-button-asynchronous">
+        #if($product.IsInStock)
+        <span class="add">
+            <a href="$link">Comprar <i class="fa fa-lock"></i></a>
+        </span>
+        #else
+        <span class="add">
+            <a>AGOTADO <i class="fa fa-lock"></i></a>
+        </span>
+        #end
+    </div>
+        <!-- Remove Decimals from prices & discount -->
+    <script>
+      //console.log("nuevo16");
+        if (typeof window.replaceDecimals === 'undefined') {
+            function replaceDecimals(priceString, elementsArray) {
+                if (priceString) {
+                    for (var i = 0, len = elementsArray.length; i < len; i++) {
+                        elementsArray[i].innerHTML = priceString.replace(/\s/, '').replace(",00", '').replace(",0", '');
+                    }
+                }
+            };
+        }
+
+        if (typeof window.replaceSrc === 'undefined') {
+            function replaceSrc(scrString, elementsArray) {
+                if (scrString) {
+                  for (var i = 0, len = elementsArray.length; i < len; i++) {
+                    elementsArray[i].src = scrString.replace(/\s/, '').replace("", '');
+                  }
+                }
+            };
+        }
+
+
+        replaceDecimals("$product.BestPrice", document.querySelectorAll("#product-$id .bestPrice") );
+
+        #if ($product.HasBestPrice && $product.IsInStock)
+            var descuento_Porc= "$product.ListPriceMinusBestPriceInPercent";
+            descuento_Porc = descuento_Porc.replace("%","").replace(",",".");
+            descuento_Porc = parseFloat(descuento_Porc);
+            //console.log("%:"+descuento_Porc);
+            descuento_Porc = Math.round(descuento_Porc);
+            descuento_Porc = String(descuento_Porc);
+            descuento_Porc = descuento_Porc + " %  OFF";
+            //console.log("aproxi1:"+descuento_Porc);
+
+            replaceDecimals("$product.ListPrice", document.querySelectorAll("#product-$id .oldPrice") );
+            replaceDecimals(descuento_Porc, document.querySelectorAll("#product-$id span.cucarda") );
+            replaceDecimals(descuento_Porc, document.querySelectorAll("#product-$id .cucarda span") );
+
+        #end
+
+        //Coloca la img de cada logo.
+        var brand = "$product.BrandName";
+        brand = brand.toLowerCase();
+
+        replaceSrc("/arquivos/"+brand+"_br.png", document.querySelectorAll("#product-$id .brand img"));
+
+        //Valida si el texto de la curcarda viene vacio
+        //console.log("vacio1");
+        if( document.querySelectorAll("#product-$id .product-new .product-field ul li").length > 0 ){
+            var valor_cucarda = document.querySelectorAll("#product-$id .product-new .product-field ul li")[0].innerHTML;
+            if(valor_cucarda == ""){
+               document.querySelectorAll('#product-$id .product-new')[0].style.display = "none";
+            }
+        }
+
+    </script>
+</div><!-- Box Item -->

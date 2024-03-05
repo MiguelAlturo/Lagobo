@@ -1,0 +1,472 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Italic.svg#Montserrat-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-LightItalic.svg#Montserrat-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLight.svg#Montserrat-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraLightItalic.svg#Montserrat-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-MediumItalic.svg#Montserrat-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Light.svg#Montserrat-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BlackItalic.svg#Montserrat-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Black.svg#Montserrat-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ThinItalic.svg#Montserrat-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBoldItalic.svg#Montserrat-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-Thin.svg#Montserrat-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBoldItalic.svg#Montserrat-ExtraBoldItalic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.ttf.css') format('truetype'),
+        url('https://lagobo.vtexassets.com/arquivos/Montserrat-BoldItalic.svg#Montserrat-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Bold.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Bold.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Bold.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Bold.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Bold.ttf.css') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-BlackItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-BlackItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BlackItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BlackItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BlackItalic.ttf.css') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Italic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Italic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Italic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Italic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Italic.ttf.css') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-BoldItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-BoldItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BoldItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BoldItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-BoldItalic.ttf.css') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Light.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Light.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Light.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Light.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Light.ttf.css') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Medium.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Medium.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Medium.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Medium.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Medium.ttf.css') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-LightItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-LightItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-LightItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-LightItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-LightItalic.ttf.css') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-MediumItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-MediumItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-MediumItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-MediumItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-MediumItalic.ttf.css') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Regular.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Regular.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Regular.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Regular.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Regular.ttf.css') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Thin.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Thin.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Thin.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Thin.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Thin.ttf.css') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-ThinItalic.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-ThinItalic.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-ThinItalic.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-ThinItalic.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-ThinItalic.ttf.css') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Black.eot.css');
+    src: url('https://lagobo.vtexassets.com/arquivos/Roboto-Black.eot.css?#iefix') format('embedded-opentype'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Black.woff2.css') format('woff2'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Black.woff.css') format('woff'),
+        url('https://lagobo.vtexassets.com/arquivos/Roboto-Black.ttf.css') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "lagoboFont";
+    src:  url('https://lagobo.vtexassets.com/arquivos/Lagobo-Icons.eot.css?ncii98');
+    src:  url('https://lagobo.vtexassets.com/arquivos/Lagobo-Icons.eot.css?ncii98#iefix') format('embedded-opentype'),
+    url('https://lagobo.vtexassets.com/arquivos/Lagobo-Icons.ttf.css?ncii98') format('truetype'),
+    url('https://lagobo.vtexassets.com/arquivos/Lagobo-Icons.woff.css?ncii98') format('woff'),
+    url('https://lagobo.vtexassets.com/arquivos/Lagobo-Icons.svg.css?ncii98#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="OPIcon-"], [class*=" OPIcon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'lagoboFont' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.OPIcon-trash:before {
+    content: "\e916";
+}
+.OPIcon-search:before {
+    content: "\e909";
+}
+.OPIcon-credit-card:before {
+    content: "\e90d";
+}
+.OPIcon-menu:before {
+    content: "\e914";
+}
+.OPIcon-like:before {
+    content: "\e900";
+}
+.OPIcon-touch:before {
+    content: "\e901";
+}
+.OPIcon-height:before {
+    content: "\e902";
+}
+.OPIcon-dimensions:before {
+    content: "\e903";
+}
+.OPIcon-hand:before {
+    content: "\e904";
+}
+.OPIcon-arrow-down:before {
+    content: "\e905";
+}
+.OPIcon-arrow-up:before {
+    content: "\e906";
+}
+.OPIcon-arrow-left:before {
+    content: "\e907";
+}
+.OPIcon-arrow-right:before {
+    content: "\e908";
+}
+.OPIcon-logo:before {
+    content: "\e90a";
+}
+.OPIcon-50years:before {
+    content: "\e90b";
+}
+.OPIcon-account:before {
+    content: "\e90c";
+}
+.OPIcon-facebook:before {
+    content: "\e90e";
+}
+.OPIcon-instagram:before {
+    content: "\e90f";
+}
+.OPIcon-location:before {
+    content: "\e910";
+}
+.OPIcon-minicart:before {
+    content: "\e911";
+}
+.OPIcon-quickview:before {
+    content: "\e912";
+}
+.OPIcon-safe:before {
+    content: "\e913";
+}
+.OPIcon-truck:before {
+    content: "\e915";
+}

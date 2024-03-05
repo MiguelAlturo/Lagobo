@@ -1,0 +1,776 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif !important;
+    input,
+    select,
+    textarea,
+    button {
+        border-radius: 0;
+        font-family: $secondaryFont;
+    }
+    header {
+        .header_checkout {
+            .top-header {
+                display: block !important;
+                background-color: $red;
+                width: stretch;
+                padding: 5px 15px;
+                ul {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    margin-left: auto;
+                    margin-bottom: 0;
+                    padding: 0;
+                    @media screen and (max-width: 768px) {
+                        justify-content: center;
+                    }
+                    li {
+                        list-style-type: none;
+                        a {
+                            color: $white;
+                            font-size: 14px;
+                        }
+                        &:first-child {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+            .main-header {
+                background-color: $lightBlue;
+                padding: 5px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @media screen and (max-width: 768px) {
+                    justify-content: center;
+                    .pago-seguro {
+                        display: none;
+                    }
+                }
+                a,
+                span {
+                    color: $white;
+                    font-size: 14px;
+                }
+                .logo_checkout {
+                    img {
+                        width: 100%;
+                        max-width: 320px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        #extra-footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: stretch;
+            background-color: $lighterGray;
+            padding: 5px 15px;
+            .left-side {
+                p {
+                    color: $darkBlue;
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+            .right-side {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+                img {
+                    &.payment-logos {
+                        max-width: 400px !important;
+                        width: 100%;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-cart {
+        max-width: 1200px;
+        width: 100%;
+        padding: 5px 15px;
+        h1 {
+            text-align: center;
+            color: $black;
+            font-size: 2rem;
+        }
+        .checkout-container {
+            .btn-success {
+                @include principal;
+                font-size: 14px;
+                text-shadow: none !important;
+                &:hover {
+                    color: $red;
+                    background-color: $white;
+                }
+            }
+            .cart-template {
+                padding: 0 10px;
+                .cart-links-bottom {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: flex-end;
+                    @media screen and (max-width: 768px) {
+                        display: block !important;
+                        margin-left: auto;
+                    }
+                    .link-choose-more-products-wrapper {
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            height: 35px;
+                            background-color: $white;
+                            border: 1px solid $darkBlue;
+                            color: $darkBlue;
+                            margin-bottom: 0;
+                            width: stretch;
+                            padding: 0 15px;
+                            line-height: 35px;
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+                    }
+                }
+                &-holder {
+                    .empty-cart-content {
+                        #cart-choose-products {
+                            display: none;
+                        }
+                    }
+                    .cart {
+                        padding: 0;
+                        border: 0;
+                        .cart-items {
+                            thead {
+                                tr {
+                                    th {
+                                        background-color: $gray3;
+                                        color: $black;
+                                        text-align: center;
+                                        padding: 15px 5px 10px;
+                                        font-size: 15px;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    border-bottom: 1px solid #ddd;
+                                    @media screen and (min-width: 768px) {
+                                        min-height: 100px;
+                                    }
+                                    td {
+                                        &.product-image {
+                                            padding: 10px 5px;
+                                            width: auto;
+                                            text-align: center;
+                                            @media screen and (min-width: 768px) {
+                                                padding: 0 5px;
+                                            }
+                                            img {
+                                                height: auto;
+                                                max-width: 100px;
+                                                width: 100%;
+                                                margin: auto;
+                                            }
+                                        }
+                                        &.product-name {
+                                            a {
+                                                text-decoration: none;
+                                                color: $black;
+                                                font-size: 15px;
+                                                @media screen and (max-width: 768px) {
+                                                    max-width: 200px;
+                                                    margin-left: auto;
+                                                    font-size: 12px;
+                                                }
+                                            }
+                                            .brand,
+                                            .seller {
+                                                display: none;
+                                            }
+                                        }
+                                        &.shipping-date {
+                                            .shipping-estimate-date {
+                                                font-size: 15px;
+                                                color: $black;
+                                            }
+                                        }
+                                        &.product-price {
+                                            span {
+                                                & [class*='-label'] {
+                                                    display: none;
+                                                }
+                                                font-size: 15px;
+                                                color: $black;
+                                            }
+                                        }
+                                        &.quantity {
+                                            @media screen and (max-width: 768px) {
+                                                margin-left: 150px;
+                                                margin-top: 10px;
+                                                width: auto;
+                                            }
+                                            input {
+                                                border: 0;
+                                                width: 30px;
+                                                box-shadow: none;
+                                                margin: 0;
+                                            }
+                                        }
+                                        &.quantity-price {
+                                            span {
+                                                font-size: 15px;
+                                                color: $black;
+                                            }
+                                        }
+                                        &.item-remove {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .summary-template-holder {
+                    .cart-more-options {
+                        @media screen and (min-width: 768px) {
+                            margin-left: 15px;
+                        }
+                        .srp-content {
+                            .srp-main-title {
+                                color: $black;
+                                font-size: 18px;
+                            }
+                            .srp-description {
+                                font-size: 12px;
+                                color: $black;
+                            }
+                            .srp-data {
+                                margin-top: 0;
+                                #shipping-calculate-link {
+                                    @include principal;
+                                    margin-top: 10px;
+                                }
+                                .srp-postal-code {
+                                    .srp-postal-code__form {
+                                        .vtex-shipping-preview-0-x-postalCodeSelect {
+                                            margin-top: 0;
+                                            .input {
+                                                &.ship-state,
+                                                &.ship-city {
+                                                    width: stretch;
+                                                    margin-right: 0;
+                                                    select {
+                                                        width: stretch;
+                                                        border-radius: 0;
+                                                    }
+                                                }
+                                            }
+                                            #cart-shipping-calculate {
+                                                @include principal;
+                                                font-size: 12px;
+                                                margin: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                                .srp-result {
+                                    .srp-delivery-select-container {
+                                        border-radius: 0;
+                                        border-color: #ddd;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .cart-totalizers {
+                        .coupon-column {
+                            .summary-coupon {
+                                margin-left: 0;
+                                .coupon-form {
+                                    .coupon-fieldset {
+                                        .coupon-data {
+                                            margin: 0;
+                                            .link-coupon-add {
+                                                @include principal;
+                                                height: 25px;
+                                                line-height: 25px;
+                                                width: fit-content;
+                                                @media screen and (max-width: 768px) {
+                                                    width: stretch;
+                                                }
+                                                &:hover {
+                                                    background-color: $white;
+                                                    color: $red;
+                                                }
+                                                &::before {
+                                                    content: 'Agregar Cupón de Descuento';
+                                                    font-size: 12px;
+                                                }
+                                                span {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                        .coupon-fields {
+                                            width: 100%;
+                                            span {
+                                                display: flex;
+                                                align-items: center;
+                                                width: stretch;
+                                                #cart-coupon {
+                                                    border-radius: 0;
+                                                    height: 35px;
+                                                    line-height: 35px;
+                                                    margin-right: 15px;
+                                                    padding: 0 15px;
+                                                    box-shadow: none;
+                                                }
+                                                .loading-coupon {
+                                                    display: none !important;
+                                                }
+                                                #cart-coupon-add {
+                                                    @include principal;
+                                                    font-size: 0;
+                                                    &:before {
+                                                        content: 'Añadir cupón';
+                                                        font-size: 12px;
+                                                        color: $white;
+                                                        transition: all 0.5s;
+                                                    }
+                                                    &:hover {
+                                                        &:before {
+                                                            color: $red;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .coupon-label {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .accordion-heading {
+                            display: block;
+                            .accordion-toggle {
+                                font-size: 14px;
+                                text-align: center;
+                                width: 100%;
+                                padding: 5px 10px;
+                                background-color: $gray3;
+                                color: $black;
+                                display: block;
+                                @media screen and (max-width: 768px) {
+                                    width: stretch;
+                                }
+                            }
+                        }
+                        .totalizers-list {
+                            tr {
+                                &.srp-summary-result {
+                                    display: table-row;
+                                }
+                                td {
+                                    &.info {
+                                        text-align: left;
+                                        font-size: 14px;
+                                        vertical-align: middle;
+                                        width: 50%;
+                                    }
+                                    &.monetary {
+                                        text-align: right;
+                                        vertical-align: middle;
+                                        width: 50%;
+                                    }
+                                    &.empty,
+                                    &.space {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        tfoot {
+                            tr {
+                                td {
+                                    &.info {
+                                        text-align: left;
+                                        font-size: 1rem;
+                                        vertical-align: middle;
+                                        width: 50%;
+                                    }
+                                    &.monetary {
+                                        text-align: right;
+                                        vertical-align: middle;
+                                        font-size: 1rem;
+                                        font-weight: bold;
+                                        width: 50%;
+                                    }
+                                    &.empty,
+                                    &.space {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container-order-form {
+        max-width: 1200px;
+        width: 100%;
+        padding: 5px 15px;
+        @media screen and (max-width: 768px) {
+            padding: 5px 10px !important;
+            width: stretch;
+        }
+        .checkout-container {
+            .cart-template {
+                .summary-template-holder {
+                    .cart-totalizers {
+                        .totalizers-list {
+                            tr {
+                                &.srp-summary-result {
+                                    display: table-row;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .orderform-template {
+                &-holder {
+                    .btn-success {
+                        @include principal;
+                        font-size: 14px;
+                        text-shadow: none !important;
+                        margin: auto;
+                        &:hover {
+                            color: $red;
+                            background-color: $white;
+                        }
+                    }
+                    #client-profile-data,
+                    #shipping-data,
+                    #payment-data {
+                        .step {
+                            border: 1px solid $gray3;
+                            border-radius: 0;
+                            @media screen and (max-width: 768px) {
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    #client-profile-data {
+                        .client-pre-email {
+                            .pre-email {
+                                .client-pre-email-h {
+                                    margin-bottom: 15px;
+                                    label {
+                                        span {
+                                            font-size: 24px;
+                                            color: $black;
+                                        }
+                                        small {
+                                            font-size: 20px;
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                                .client-email {
+                                    #client-pre-email {
+                                        border: none;
+                                        border-radius: 0;
+                                        border-bottom: 1px solid $red;
+                                        box-shadow: none;
+                                        height: 35px;
+                                        line-height: 35px;
+                                    }
+                                    #btn-client-pre-email {
+                                        @include principal;
+                                        top: -1px;
+                                        right: 0;
+                                        &:hover {
+                                            border-bottom: 0;
+                                        }
+                                        @media screen and (max-width: 768px) {
+                                            margin-top: 15px;
+                                            position: unset;
+                                            border: 1px solid;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .client-profile-data {
+                            .accordion-body {
+                                .accordion-inner {
+                                    .box-step {
+                                        .form-step {
+                                            .box-client-info {
+                                                .terms-conditions,
+                                                .sagrilaft {
+                                                    #terms-conditions-check,
+                                                    #sagrilaft-check {
+                                                        margin-top: 0;
+                                                        margin-right: 7px;
+                                                    }
+                                                }
+                                                .box-client-info-pf {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    p {
+                                                        float: none;
+                                                        width: calc(50% - 5px);
+                                                        label {
+                                                            font-size: 14px;
+                                                            color: $black;
+                                                            font-weight: border;
+                                                        }
+                                                        input {
+                                                            width: stretch;
+                                                            border-radius: 0;
+                                                            box-shadow: none;
+                                                        }
+                                                        &.client-notice {
+                                                            width: 100%;
+                                                        }
+                                                        &:nth-child(3) {
+                                                            width: 100%;
+                                                        }
+                                                        &.client-email {
+                                                            width: 100%;
+                                                        }
+                                                        &.client-first-name {
+                                                            margin-right: 10px;
+                                                        }
+                                                        &.client-document {
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                    div {
+                                                        width: calc(50% - 5px);
+                                                        p {
+                                                            width: 100%;
+                                                        }
+                                                    }
+                                                }
+                                                .box-client-info-pj {
+                                                    .corporate-info-box {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        p {
+                                                            width: calc(50% - 7.5px);
+                                                            label {
+                                                                font-size: 14px;
+                                                                color: $black;
+                                                                font-weight: border;
+                                                            }
+                                                            input {
+                                                                width: stretch;
+                                                                border-radius: 0;
+                                                                box-shadow: none;
+                                                            }
+                                                            &.client-company-name,
+                                                            &.client-company-nickname {
+                                                                width: 100%;
+                                                            }
+                                                            &.client-company-ie {
+                                                                margin-right: 10px;
+                                                            }
+                                                        }
+                                                        div {
+                                                            width: calc(50% - 5px);
+                                                            p {
+                                                                width: 100%;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #shipping-data {
+                        .shipping-data {
+                            .shipping-container {
+                                .vtex-omnishipping-1-x-addressFormPart1 {
+                                    p {
+                                        &.input {
+                                            width: 100%;
+                                            margin-right: 0;
+                                            label {
+                                                font-size: 14px;
+                                                color: $black;
+                                            }
+                                            select {
+                                                width: stretch;
+                                            }
+                                        }
+                                    }
+                                }
+                                .vtex-omnishipping-1-x-deliveryGroup {
+                                    .vtex-omnishipping-1-x-shippingSectionTitle {
+                                        font-size: 14px;
+                                        color: $black;
+                                    }
+                                }
+                                .vtex-omnishipping-1-x-addressForm {
+                                    p,
+                                    label {
+                                        font-size: 14px;
+                                        color: $black;
+                                    }
+                                    .vtex-omnishipping-1-x-address {
+                                        p {
+                                            &.input {
+                                                width: 100%;
+                                                input {
+                                                    border-radius: 0;
+                                                    box-shadow: none;
+                                                    width: stretch;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .shipping-summary-placeholder {
+                                    .vtex-omnishipping-1-x-summaryChange {
+                                        @include principal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #payment-data {
+                        .payment-body {
+                            .box-step {
+                                .box-step-content {
+                                    .box-new {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        .link-gift-card {
+                                            width: 100%;
+                                            margin-bottom: 15px;
+                                            left: 0;
+                                            position: unset;
+                                        }
+                                        .payment-group {
+                                            width: 28%;
+                                            margin-right: 15px;
+                                            margin-top: 0;
+                                            float: none;
+                                            @media screen and (max-width: 768px) {
+                                                width: stretch;
+                                            }
+                                            .payment-group-list-btn {
+                                                width: stretch;
+                                                .payment-group-item {
+                                                    width: stretch;
+                                                    background-position: 90% center;
+                                                    background-size: 40px;
+                                                    background-repeat: no-repeat;
+                                                    &-text {
+                                                        color: $black;
+                                                        font-size: 12px;
+                                                    }
+                                                    &#payment-group-creditCardPaymentGroup {
+                                                        background-image: url(/arquivos/Tarjeta.png);
+                                                        background-size: 52px;
+                                                        background-position: 93%;
+
+                                                        .payment-group-item-text {
+                                                            background: none;
+                                                        }
+                                                    }
+                                                    &#payment-group-custom201PaymentGroupPaymentGroup {
+                                                        display: none;
+                                                        &.show {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    &.pg-codensa {
+                                                        background-image: url(/arquivos/Codensa.png);
+                                                    }
+                                                    &#payment-group-SisteCreditoPaymentGroup {
+                                                        background-image: url(/arquivos/Sistecredito.png);
+                                                        background-size: 90px;
+                                                        background-position: right center;
+                                                    }
+                                                    &#payment-group-debitPaymentGroup {
+                                                        background-image: url(/arquivos/pse.png);
+                                                    }
+                                                    &#payment-group-SumasPayPaymentGroup {
+                                                        background-image: url(/arquivos/su_pay_logo.jpg);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .steps-view {
+                                            width: 66%;
+                                            float: none;
+                                            @media screen and (max-width: 768px) {
+                                                width: stretch;
+                                            }
+                                            .payment-method {
+                                                .box-payment-option {
+                                                    .bank-invoice-list {
+                                                        .bank-invoice-item-baloto {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .orderform-template {
+        .cart-template {
+            &.mini-cart {
+                .cart-fixed {
+                    .btn-success {
+                        @include principal;
+                        font-size: 14px;
+                        text-shadow: none !important;
+                        margin: auto;
+                        width: 100%;
+                        margin-top: 20px;
+                        &:hover {
+                            color: $red;
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

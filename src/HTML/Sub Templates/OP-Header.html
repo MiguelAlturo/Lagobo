@@ -1,0 +1,75 @@
+<div id="VTEX-fullTextSearchBox">
+    <vtex.cmc:fullTextSearchBox />
+</div>
+<header>
+    <div class="preHeader">
+        <vtex.cmc:textHeader />
+    </div>
+    <div class="mainHeader">
+        <div class="mainContainer">
+            <div class="categories">
+                <div class="categoriesLabel">
+                    <span class="OPIcon-menu"></span>
+                    <span alt="Click para abrir el menú" title="Click para abrir el menú">CATEGORÍAS</span>
+                    <span class="OPIcon-arrow-down"></span>
+                </div>
+                <div class="categoriesContainer">
+                    <div class="close-menu-container"></div>
+                    <div class="mobile-menu-container">
+                        <div class="item">
+                            <a href="">
+                                <span class="OPIcon-account"></span>
+                                Mi cuenta
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <span class="OPIcon-location"></span>
+                                Tiendas
+                            </a>
+                        </div>
+                    </div>
+                    <vtex.cmc:OPMenu />
+                </div>
+            </div>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://lagobo.vtexassets.com/arquivos/new_header_logo.png" alt="Oportunidades" />
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" id="search-engine-input" autocomplete="off" placeholder="¿Qué estás buscando?" />
+                <i class="OPIcon-search"></i>
+                <div id="searchInputResultList">
+                    <!-- Render Results By JS -->
+                    <div id="loader-search-engine">
+                        <div class="lds-ellipsis">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stores_account_minicart">
+                <a class="headerIconItem" href="/locales">
+                    <i class="OPIcon-location"></i>
+                    <!-- <span>Tiendas</span> -->
+                </a>
+                <a class="headerIconItem" href="/account">
+                    <i class="OPIcon-account"></i>
+                    <!-- <span>Mi cuenta</span> -->
+                </a>
+                <div class="headerIconItem minicart">
+                    <i class="OPIcon-minicart"></i>
+                    <!-- <span>Mi carrito</span> -->
+                    <div id="minicart">
+                        <vtex.cmc:OPMinicart />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<vtex.cmc:OPSearchEngine />

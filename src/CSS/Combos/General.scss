@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*============================================================================
+                Master del Ecommerce - Lagobo | Generales
+==============================================================================*/
+
+/*================    VARIABLES   ================*/
+@import "../Variables/Colores.scss";
+@import "../Variables/Mixins.scss";
+@import "../Variables/Fuentes.scss";
+
+/*================ GLOBAL MODULES ================*/
+@import "../Global/Normalizador.scss";
+@import "../Global/Generales.scss";
+@import "../Global/Header.scss";
+@import "../Global/Vitrinas.scss";
+@import "../Global/Footer.scss";

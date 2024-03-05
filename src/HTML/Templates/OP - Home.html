@@ -1,0 +1,155 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v2.0
+*
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <vtex:metaTags />
+        <title>Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar</title>
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar" />
+        <meta
+            property="og:description"
+            content="En Oportunidades.com.co encontrarás electrodomésticos, tecnología y línea hogar de reconocidas marcas como: Samsung, LG, Mabe, Centrales, Haceb, entre otras."
+        />
+        <meta property="og:url" content="https://www.oportunidades.com.co/" />
+        <meta property="og:site_name" content="Oportunidades - Electrodomésticos-Tecnología-Hogar" />
+        <meta property="og:image" content="https://lagobo.vteximg.com.br/arquivos/electro1.png" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+            name="twitter:description"
+            content="En Oportunidades.com.co encontrarás electrodomésticos, tecnología y línea hogar de reconocidas marcas como: Samsung, LG, Mabe, Centrales, Haceb, entre otras."
+        />
+        <meta name="twitter:title" content="Almacenes Oportunidades: Electrodomésticos-Tecnología-Hogar" />
+        <meta name="twitter:image" content="https://lagobo.vteximg.com.br/arquivos/electro1.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script type="text/javascript">
+            adroll_adv_id = 'WUSJHM5Q7ZCTJBUVCNE2AV';
+            adroll_pix_id = 'G33UDMQIXZAHDFHHIKV3C7';
+            adroll_version = '2.0';
+
+            (function (w, d, e, o, a) {
+                w.__adroll_loaded = true;
+                w.adroll = w.adroll || [];
+                w.adroll.f = ['setProperties', 'identify', 'track'];
+                var roundtripUrl = 'https://s.adroll.com/j/' + adroll_adv_id + '/roundtrip.js';
+                for (a = 0; w.adroll.f.length > a; a++) {
+                    w.adroll[w.adroll.f[a]] =
+                        w.adroll[w.adroll.f[a]] ||
+                        (function (n) {
+                            return function () {
+                                w.adroll.push([n, arguments]);
+                            };
+                        })(w.adroll.f[a]);
+                }
+
+                e = d.createElement('script');
+                o = d.getElementsByTagName('script')[0];
+                e.async = 1;
+                e.src = roundtripUrl;
+                o.parentNode.insertBefore(e, o);
+            })(window, document);
+            adroll.track('pageView');
+        </script>
+        <vtex:template id="OP-CommonStyles" />
+        <link rel="stylesheet" href="https://lagobo.vtexassets.com/arquivos/OP-Home.min.css?v=10.08.2022-2" />
+    </head>
+
+    <body id="home">
+        <!--  SubTemplate: Header -->
+        <vtex:template id="OP-Header" />
+        <!-- /SubTemplate: Header -->
+
+        <!--  Content -->
+        <section class="slider banner">
+            <div class="boxBanner">
+                <vtex:contentPlaceHolder id="banner-principal" />
+            </div>
+        </section>
+
+        <section class="home_contador">
+            <vtex:contentPlaceHolder id="home_contador" />
+        </section>
+
+        <section class="slider_marcas">
+            <h2 class="title">Nuestras marcas</h2>
+            <div class="container">
+                <vtex:contentPlaceHolder id="banner-5" />
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Categorías recomendadas</h2>
+            <div class="mainContainer">
+                <vtex:contentPlaceHolder id="categories" />
+            </div>
+        </section>
+
+        <section class="home-titles">
+            <div class="container">
+                <h1 class="home-title">
+                    <vtex:contentPlaceHolder id="H1-Home" />
+                </h1>
+                <h2 class="home-subtitle">
+                    <vtex:contentPlaceHolder id="H2-Home" />
+                </h2>
+            </div>
+        </section>
+
+        <section class="shelf_banner no-tabs">
+            <div class="mainContainer">
+                <vtex:contentPlaceHolder id="shelf-1" />
+            </div>
+        </section>
+
+        <section class="shelf">
+            <div class="container">
+                <div class="showcasesContainer">
+                    <vtex:contentPlaceHolder id="header-shelf-2" />
+                    <vtex:contentPlaceHolder id="shelf-2" />
+                </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="container">
+                <vtex:contentPlaceHolder id="banner-3" />
+            </div>
+        </section>
+
+        <section class="double_banner">
+            <div class="container">
+                <vtex:contentPlaceHolder id="banner-4" />
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="container">
+                <vtex:contentPlaceHolder id="banner-6" />
+            </div>
+        </section>
+
+        <section class="double_banner">
+            <div class="container">
+                <vtex:contentPlaceHolder id="banner-7" />
+            </div>
+        </section>
+
+        <!-- /Content -->
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="OP-Footer" />
+        <!-- /SubTemplate: Footer -->
+    </body>
+    <vtex:template id="OP-CommonScripts" />
+    <script src="https://lagobo.vtexassets.com/arquivos/OP-Home.min.js?v=10.08.2022"></script>
+</html>

@@ -1,0 +1,139 @@
+#static-page{
+    .page {
+        .bread-crumb {
+            ul {
+                display: flex;
+                align-items: center;
+                padding-left: 0;
+                li {
+                    margin-right: 10px;
+                    list-style-type: none;
+                    &:first-child {
+                        a {
+                            text-decoration: none;
+                            span {
+                                font-size: 0;
+                                &::before {
+                                    content: "Oportunidades";
+                                    font-size: 14px;
+                                    color: #00c4ff;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            max-width: 1200px;
+            padding: 0 15px;
+            margin: 30px auto;
+            h1 {
+                font-size: 24px;
+                line-height: 1.2;
+                color: #18337f;
+                text-align: center;
+                letter-spacing: 1px;
+                @media screen and (max-width: 768px){
+                    font-size: 18px;
+                }
+            }
+            h2 {
+                font-size: 17px;
+                color: #18337f;
+                position: relative;
+                @media screen and (max-width: 768px){
+                    font-size: 15px;
+                }
+            }
+            p {
+                margin-bottom: 20px;
+                font-size: 14px;
+                color: #000;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                @media screen and (max-width: 768px){
+                    font-size: 12px;
+                }
+                &.subtitle {
+                    font-size: 16px;
+                    color: #18337f;
+                    margin: 10px 0;
+                }
+                b {
+                    font-size: 16px;
+                    display: block;
+                    @media screen and (max-width: 768px){
+                        font-size: 14px;
+                    }
+                }
+            }
+            ul {
+                padding-left: 15px;
+                li {
+                    margin: 5px;
+                    font-size: 14px;
+                    color: #000;
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                    @media screen and (max-width: 768px){
+                        font-size: 12px;
+                    }
+                }
+            }
+            .drop_container {
+                margin: 15px 0;
+                .drop_title {
+                    cursor: pointer;
+                    position: relative;
+                    padding: 20px 15px;
+                    background-color: #FAF8ED;
+                    border-radius: 10px;
+                    h2 {
+                        &.active {
+                            &:after {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+                        &:after {
+                            content: "\e905";
+                            font-family: 'lagoboFont';
+                            font-size: 10px;
+                            display: inline-block;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: all 0.5s;
+                        }
+                    }
+                }
+                .drop_content {
+                    visibility: hidden;
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all 0.5s;
+                    width: -webkit-fill-available;
+                    font-size: 14px;
+                    color: #000;
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                    @media screen and (max-width: 768px){
+                        font-size: 12px;
+                    }
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                        max-height: 300vh;
+                        padding: 10px 15px;
+                        border: 1px solid #E8ECF2;
+                        margin-top: 15px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

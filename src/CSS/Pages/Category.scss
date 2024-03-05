@@ -1,0 +1,492 @@
+.bloque {
+    h2 {
+        text-align: center;
+        margin: 30px auto;
+        font-size: 2rem;
+        font-family: Montserrat,sans-serif;
+        color: #00c4ff;
+    }
+}
+#grid-page{
+    #box-bread-brumb{
+        margin: 15px 0;
+        ul{
+            display:flex;
+            align-items:center;
+            justify-content: flex-start;
+            margin: 0 0 15px;
+            list-style: none;
+            li{
+                list-style-type: none;
+                margin-right: 10px;
+                &:first-child{
+                    a{
+                        font-size: 0;
+                    }
+                    &::before{
+                        content: "OPORTUNIDADES";
+                        font-size: 10px;
+                        color: $gray2;
+                        font-family: $secondaryFont;
+                    }
+                }
+                &:after{
+                    content: "/";
+                    margin-left: 10px;
+                    font-weight: 400;
+                }
+                a{
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    color: $gray;
+                    font-family: $secondaryFont;
+                }
+                &:last-child{
+                    margin-right: 0;
+                    &:after{
+                        content: "";
+                        margin-left: 0;
+                    }
+                    a{
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    .full-width{
+        margin-bottom: 15px;
+        .bannerCategory{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    #content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        .filters-mobile{
+            display: none;
+        }
+        #filters{
+            width: 18%;
+            position: sticky;
+            top: 100px;
+            .navigation-tabs,
+            .navigation{
+                .menu-departamento{
+                    .menu-navegue{
+                        display: none;
+                        .bt-refinar,
+                        .search-navigator-tab{
+                            display: none;
+                        }
+                    }
+                    .apply-filters,
+                    .close-filters{
+                        display: none;
+                    }
+                    .search-multiple-navigator{
+                        display: block !important;
+                        .filter-title-container{
+                            margin-bottom: 20px;
+                            cursor: pointer;
+                        }
+                        h3,
+                        h4,
+                        .bt-refinar{
+                            display: none;
+                        }
+                        fieldset{
+                            padding: 10px 0;
+                            border-style: solid;
+                            border-color: $lightGray;
+                            border-width: 0 0 1px;
+                            &:nth-child(5){
+                                border-top: 0;
+                            }
+                            &.refino,
+                            &.refino-marca{
+                                h5{
+                                    font-size: 15px;
+                                    @include boldFont;
+                                    cursor: pointer;
+                                    position: relative;
+                                    text-transform: uppercase;
+                                    margin-left: 30px;
+                                    &:after{
+                                        content: "\e908";
+                                        font-family: $iconFont;
+                                        position: absolute;
+                                        right: 6px;
+                                        font-size: 14px;
+                                        line-height: 18px;
+                                        transform: rotate(90deg);
+                                        transition: transform .5s;
+                                    }
+                                    &.active{
+                                        padding-bottom: 5px;
+                                        &:after{
+                                            display: inline-block;
+                                            transform: rotate(270deg);
+                                        }
+                                    }
+                                }
+                                div{
+                                    width: 0;
+                                    height: 0;
+                                    max-width: 0;
+                                    max-height: 0;
+                                    padding-left: 40px;
+                                    transition: max-height 2s;
+                                    overflow: hidden;
+                                    &.active{
+                                        width: 100%;
+                                        height: auto;
+                                        max-width: 100%;
+                                        max-height: 400px;
+                                        label{
+                                            font-size: 14px;
+                                            @include regularFont;
+                                            padding: 10px 0 10px 20px;
+                                            font-family: $secondaryFont;
+                                            &:before{
+                                                content: "";
+                                                width: 15px;
+                                                height: 15px;
+                                                background-color: $white;
+                                                border: 1px solid $gray;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 50%;
+                                                line-height: 20px;
+                                                @include transition(all .5s);
+                                                transform: translateY(-50%)
+                                            }
+                                            &.sr_selected{
+                                                &:before{
+                                                    background-color: $red;
+                                                    border-color: $red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    label{
+                                        display: block;
+                                        font-size: 0;
+                                        position: relative;
+                                        cursor: pointer;
+                                        input{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .search-single-navigator{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+        #products{
+            width: 80%;
+            .main{
+                .showcases{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    width: 100%;
+                    ul{
+                        flex: 1 1 33%;
+                        max-width: 33%;
+                        li{
+                            width: 100%;
+                        }
+                    }
+                }
+                .searchResultsTime,
+                .pager,
+                .sub:last-child{
+                    display: none;
+                }
+                .sub{
+                    .resultado-busca-filtro{
+                        .filterBy,
+                        .compare{
+                            display: none;
+                        }
+                        .orderBy{
+                            width: fit-content;
+                            padding: 0;
+                            border: 0;
+                            display: block;
+                            margin-left: auto;
+                            select{
+                                background-color: transparent;
+                                border: 1px solid #f1f1f1;
+                                box-shadow: 0px 0px 0px transparent;
+                                -webkit-box-shadow: 0px 0px 0px transparent;
+                                padding: 5px 10px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include query-small{
+    #grid-page{
+        #content{
+            flex-wrap: wrap;
+            .filters-mobile{
+                display: block;
+            }
+            #filters{
+                width: 100%;
+                position: unset;
+                top: 0;
+                margin-bottom: 30px;
+                .navigation-tabs,
+                .navigation{
+                    .menu-departamento{
+                        position: fixed;
+                        left: -100%;
+                        transition: left 0.5s;
+                        padding: 20px;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        z-index: 123;
+                        top: 0;
+                        &.active{
+                            left: 0;
+                        }
+                        .apply-filters{
+                            display: block;
+                            padding: 5px 10px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            @include boldFont;
+                            text-align: center;
+                            border: 1px solid $darkRed;
+                            margin: 50px auto 15px;
+                            line-height: normal;
+                            background-color: $darkRed;
+                            color: $white;
+                        }
+                        .close-filters{
+                            display: block;
+                            padding: 5px 10px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            @include boldFont;
+                            text-align: center;
+                            border: 1px solid $gray2;
+                            margin: 0 auto 15px;
+                            line-height: normal;
+                            background-color: transparent;
+                            color: $gray2;
+                        }
+                        .menu-navegue{
+                            display: none;
+                            .bt-refinar,
+                            .search-navigator-tab{
+                                display: none;
+                            }
+                        }
+                        .search-multiple-navigator{
+                            max-height: 400px;
+                            overflow-y: auto;
+                            .filter-title-container{
+                                margin-bottom: 20px;
+                                cursor: pointer;
+                            }
+                            h3,
+                            h4,
+                            .bt-refinar{
+                                display: none;
+                            }
+                            fieldset{
+                                padding: 10px 0;
+                                border-style: solid;
+                                border-color: $lightGray;
+                                border-width: 0 0 1px;
+                                &:nth-child(5){
+                                    border-top: 0;
+                                }
+                                &.refino,
+                                &.refino-marca{
+                                    h5{
+                                        font-size: 15px;
+                                        @include boldFont;
+                                        cursor: pointer;
+                                        position: relative;
+                                        text-transform: uppercase;
+                                        margin-left: 0;
+                                        &:after{
+                                            content: "\e908";
+                                            font-family: $iconFont;
+                                            position: absolute;
+                                            right: 6px;
+                                            font-size: 14px;
+                                            line-height: 18px;
+                                            transform: rotate(90deg);
+                                            transition: transform .5s;
+                                        }
+                                        &.active{
+                                            padding-bottom: 5px;
+                                            &:after{
+                                                display: inline-block;
+                                                transform: rotate(270deg);
+                                            }
+                                        }
+                                    }
+                                    div{
+                                        width: 0;
+                                        height: 0;
+                                        max-width: 0;
+                                        max-height: 0;
+                                        padding-left: 40px;
+                                        transition: max-height 2s;
+                                        &.active{
+                                            width: 100%;
+                                            height: auto;
+                                            max-width: 100%;
+                                            max-height: 400px;
+                                            label{
+                                                font-size: 14px;
+                                                @include regularFont;
+                                                padding: 10px 0 10px 20px;
+                                                font-family: $secondaryFont;
+                                                &:before{
+                                                    content: "";
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    background-color: $white;
+                                                    border: 1px solid $gray;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    top: 50%;
+                                                    line-height: 20px;
+                                                    @include transition(all .5s);
+                                                    transform: translateY(-50%)
+                                                }
+                                                &.sr_selected{
+                                                    &:before{
+                                                        background-color: $red;
+                                                        border-color: $red;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        label{
+                                            display: block;
+                                            font-size: 0;
+                                            position: relative;
+                                            cursor: pointer;
+                                            input{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .search-single-navigator{
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            #products{
+                width: 100%;
+                .main{
+                    .showcases{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        width: 100%;
+                        ul{
+                            flex: 1 1 50%;
+                            max-width: 50%;
+                            li{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .searchResultsTime,
+                    .pager,
+                    .sub:last-child{
+                        display: none;
+                    }
+                    .sub{
+                        .resultado-busca-filtro{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px;
+                            .filterBy,
+                            .compare{
+                                display: none;
+                            }
+                            .filters-mobile{
+                                margin-right: 5px;
+                                width: calc(50% - 5px);
+                                a{
+                                    display: block;
+                                    background-color: transparent;
+                                    border: 1px solid #f1f1f1;
+                                    box-shadow: 0px 0px 0px transparent;
+                                    -webkit-box-shadow: 0px 0px 0px transparent;
+                                    padding-left: 10px;
+                                    padding-right: 2px;
+                                    font-size: 14px;
+                                    color: $gray2;
+                                    width: 100%;
+                                    text-transform: uppercase;
+                                    @include mediumFont;
+                                    line-height: normal;
+                                    height: 31px;
+                                    line-height: 31px;
+                                    &::after{
+                                        content: "\e905";
+                                        font-family: $iconFont;
+                                        font-size: 5px;
+                                        @include mediumFont;
+                                        color: $gray2;
+                                        float: right;
+                                    }
+                                }
+                            }
+                            .orderBy{
+                                margin-left: 5px;
+                                width: calc(50% - 5px);
+                                label{
+                                    display: none;
+                                }
+                                select{
+                                    font-size: 14px;
+                                    margin-left: 0;
+                                    color: $gray2;
+                                    text-transform: uppercase;
+                                    @include mediumFont;
+                                    line-height: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

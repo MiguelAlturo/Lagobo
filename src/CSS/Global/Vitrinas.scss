@@ -1,0 +1,302 @@
+.showcasesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .categoriesTabs {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
+
+        .categoryTab {
+            width: 140px;
+            height: 100px;
+            min-width: 140px;
+            min-height: 100px;
+            border: 1px solid $darkBlue;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-right: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            cursor: pointer;
+            transition: height 0.3s ease, border-bottom 0.3s ease;
+
+            &:last-child {
+                border-right: 1px solid $darkBlue;
+            }
+
+            &.active,
+            &:hover {
+                height: 115px;
+                border-right: 1px solid $darkBlue;
+                border-bottom: 7px solid $darkBlue;
+
+                & + .categoryTab {
+                    border-left: none;
+                    padding-left: 1px;
+                }
+            }
+
+            p {
+                font-family: $secondaryFont;
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: $darkBlue;
+                width: 100%;
+                padding: 0 5px;
+                text-align: center;
+            }
+        }
+    }
+}
+.coleccion_dos {
+    .showcases {
+        & > ul:not(.slick-dots) {
+            > li {
+                @media screen and (max-width: 768px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+.showcases {
+    & > ul:not(.slick-dots) {
+        &.centered {
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            width: 25%;
+            @media screen and (max-width: 768px) {
+                width: 50%;
+            }
+            display: inline-block;
+            padding: 10px;
+
+            .shelf {
+                width: 100%;
+                text-align: center;
+
+                .productFlagsContainer {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    p {
+                        &.flag {
+                            display: block;
+                            width: fit-content;
+                            background-color: $darkBlue;
+                            color: #fff;
+                            padding: 5px 10px;
+                            margin-left: 0;
+                            text-transform: capitalize;
+                            font-size: 10px;
+                            &.descuento---pichincha {
+                                display: none;
+                            }
+                            &.preventa {
+                                font-size: 0;
+                                background-color: transparent;
+                                border: 0;
+                                background-image: url(/arquivos/cashback-244.png);
+                                width: 120px;
+                                height: 60px;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                margin: 0;
+                                padding: 0;
+                                left: 10px;
+                                &::after {
+                                    border: 0;
+                                }
+                                &::before {
+                                    border: 0;
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+                .productImageContainer {
+                    position: relative;
+
+                    .productImage {
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .productDiscount {
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        width: 0;
+                        height: 0;
+                        border-color: #00c4ff #00c4ff transparent transparent;
+                        border-style: solid;
+                        border-width: 30px;
+                        .percent {
+                            color: white;
+                            font-size: 14px;
+                            display: block;
+                            font-weight: bold;
+                            font-family: $secondaryFont;
+                            position: absolute;
+                            top: -30px;
+                        }
+                    }
+                }
+
+                .productNameContainer {
+                    text-align: center;
+                    margin-top: 10px;
+
+                    .productName {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-weight: 400;
+                        font-size: 0.9rem;
+                        height: 30px;
+                        text-decoration: none;
+                        color: $black;
+                        text-align: center;
+                    }
+                }
+
+                .productPricesContainer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin-top: 5px;
+                    width: 100%;
+                    .productListPrice {
+                        color: $darkRed;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        text-decoration: line-through;
+                        margin-right: 5px;
+                    }
+
+                    .productBestPrice {
+                        font-weight: 900;
+                        font-size: 1.05rem;
+                        color: $black;
+                    }
+
+                    .thirdPrice-flex {
+                        width: 100%;
+                        margin-top: 5px;
+                        span {
+                            font-size: 1.05rem;
+                            color: $promoRed;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .product-third-price {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 10px auto;
+                        width: 100%;
+                        .promo-img {
+                            margin-right: 10px;
+                            img {
+                                max-width: 30px;
+                            }
+                        }
+                        .promo-price {
+                            text-align: left;
+                            .third-price {
+                                font-size: 15px;
+                                color: $promoRed;
+                                font-weight: bold;
+                            }
+                            a {
+                                font-size: 15px;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+
+                .productBuyButtonContainer {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    margin-top: 5px;
+
+                    .productBuyButton {
+                        background: $red;
+                        color: $white;
+                        height: 35px;
+                        width: 85%;
+                        font-family: $secondaryFont;
+                        font-weight: 800;
+                        font-size: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        border-radius: 15px;
+                    }
+
+                    .productQuickView {
+                        width: 15%;
+                        background: $lightBlue;
+                        color: $white;
+                        min-width: 35px;
+
+                        &:hover {
+                            background: $yellow;
+                        }
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-decoration: none;
+                            font-size: 0;
+                            cursor: pointer;
+                            width: 100%;
+                            height: 100%;
+
+                            &::before {
+                                content: '\e912';
+                                font-size: 1.1rem;
+                                color: $white;
+                                font-family: $iconFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        ul.slick-dots {
+            bottom: -25px;
+        }
+    }
+}

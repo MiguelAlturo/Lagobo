@@ -1,0 +1,69 @@
+<!--
+*
+* Desarrollado por Marco Villegas
+* https://github.com/mevm24
+*
+* Template v1.0
+*
+-->
+<!DOCTYPE html>
+<html lang="es-CO" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:contentPlaceHolder id="Meta-SEO" />
+    <title>Lagobo</title>
+    <vtex:metaTags/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/arquivos/favicon.ico"/>
+    <vtex:template id="OP-CommonStyles" />
+    <vtex:template id="OP-CommonCategoryStyles" />
+</head>
+
+
+<body id="grid-page">
+    <!--  SubTemplate: Header -->
+    <vtex:template id="OP-Header" />
+    <!-- /SubTemplate: Header -->
+    <div class="page">
+        <div class="container">
+            <div id="box-bread-brumb">
+                <vtex.cmc:breadCrumb />
+            </div>
+        </div>
+        <div class="full-width">
+            <div class="bannerCategory">
+                <vtex:contentPlaceHolder id="Banner" />
+            </div>
+        </div>
+        <div class="textos-seo">
+            <h1 class="title">
+                <vtex:contentPlaceHolder id="H1" />
+            </h1>
+            <h2 class="subtitle">
+                <vtex:contentPlaceHolder id="H2" />
+            </h2>
+        </div>
+        <section id="content" class="container">
+            <aside id="filters">
+                <vtex.cmc:searchNavigator />
+                <!-- Filters base -->
+                <div class="filters-mobile">
+                    <a>
+                        Filtros
+                    </a>
+                </div>
+            </aside>
+            <article id="products" class="cambio1">
+                <vtex.cmc:searchResult layout="1bb59436-67d4-4f3d-9943-743f190d6fdf" itemCount="12" columnCount="1" />
+                <!--  Search Results / Product List -->
+            </article>
+            <!-- #products -->
+        </section>
+    </div>
+    <!--  SubTemplate: Footer -->
+    <vtex:template id="OP-Footer" />
+
+</body>
+    <vtex:template id="OP-CommonCategoryScripts" />
+    <vtex:template id="OP-CommonScripts" />
+</html>
