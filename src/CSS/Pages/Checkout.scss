@@ -774,3 +774,17 @@ body {
         }
     }
 }
+
+p.info-client {
+    max-width: 90%;
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .05882);
+    border-radius: 15px;
+    box-shadow: 1px 6px 9px -7px;
+    margin: 10px 0px;
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+        padding: 7px 15px;    
+    }
+}

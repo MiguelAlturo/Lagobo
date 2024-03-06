@@ -2,6 +2,17 @@
   location.href = '/mantenimiento';
 }*/
 
+window.onhashchange = function () {
+    if (location.hash == '#/cart') {
+        if(!document.querySelector('.info-client')){
+            changeTextInfo()
+        }
+    }
+}
+
+
+
+
 var dmlscript = document.createElement('script');
 dmlscript.src = 'https://http2.mlstatic.com/storage/bmsdk/js/dml-0.0.7.min.js';
 dmlscript.onload = () => {
@@ -149,6 +160,11 @@ $(document).ready(function () {
 
 $(window).on('hashchange load', function () {
     changeTaxName();
+    if (location.hash == '#/cart') {
+        if(!document.querySelector('.info-client')){
+            changeTextInfo()
+        }
+    }
 });
 
 const changeTaxName = () => {
@@ -193,3 +209,10 @@ const calculatePromotions = (orderForm) => {
         }
     }, 1e3);
 };
+
+// MODIFICAR TEXTO FLETE  #/CART
+
+const changeTextInfo=()=>{
+    var containerCart = document.querySelector('.cart-more-options')
+    containerCart.insertAdjacentHTML("beforeend", '<p class="info-client">Recuerda verificar que el producto haya llegado en buen estado antes de confirmar el recibido, si presentas alguna novedad deja la observacion al momento de firmar la guia.</p>');
+}

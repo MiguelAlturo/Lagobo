@@ -239,7 +239,6 @@
                     align-items: stretch;
                     justify-content: space-between;
                     margin-top: 5px;
-
                     .productBuyButton {
                         background: $red;
                         color: $white;
@@ -252,14 +251,17 @@
                         align-items: center;
                         justify-content: center;
                         text-decoration: none;
-                        border-radius: 15px;
+                        border-radius: 15px; 
                     }
 
                     .productQuickView {
                         width: 15%;
                         background: $lightBlue;
                         color: $white;
-                        min-width: 35px;
+                        min-width: 24px;
+                        border-radius: 30px;
+                        height: 33px;
+                        width: 34px;
 
                         &:hover {
                             background: $yellow;
@@ -277,9 +279,10 @@
 
                             &::before {
                                 content: '\e912';
-                                font-size: 1.1rem;
+                                font-size: 1.6rem;
                                 color: $white;
                                 font-family: $iconFont;
+                                margin: 3px 0px 0px -1px;
                             }
                         }
                     }
