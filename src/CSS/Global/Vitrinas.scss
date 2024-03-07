@@ -239,6 +239,7 @@
                     align-items: stretch;
                     justify-content: space-between;
                     margin-top: 5px;
+                    gap: 8px;
                     .productBuyButton {
                         background: $red;
                         color: $white;
@@ -260,8 +261,8 @@
                         color: $white;
                         min-width: 24px;
                         border-radius: 30px;
-                        height: 33px;
-                        width: 34px;
+                        height: 32px;
+                        width: 33px;
 
                         &:hover {
                             background: $yellow;
@@ -279,10 +280,13 @@
 
                             &::before {
                                 content: '\e912';
-                                font-size: 1.6rem;
+                                font-size: 1.2rem;
                                 color: $white;
                                 font-family: $iconFont;
-                                margin: 3px 0px 0px -1px;
+                                justify-content: center;
+                                display: flex;
+                                justify-items: center;
+                                align-items: center;
                             }
                         }
                     }
