@@ -151,10 +151,9 @@
                         top: 1px;
                         width: 0;
                         height: 0;
-                        border-right: 40px solid #ee1d23;
-                        border-top: 40px solid #ee1d23;
-                        border-left: 40px solid transparent;
-                        border-bottom: 40px solid transparent;
+                        border-color: #00c4ff #00c4ff transparent transparent;
+                        border-style: solid;
+                        border-width: 40px;
                         .percent {
                             color: white;
                             font-size: 17px;

@@ -328,8 +328,15 @@ footer{
                             margin-right: 20px;
                             font-family: $secondaryFont;
                             line-height: normal;
+                            width: 55px;
+                            background: #fff;
+                            border-radius: 100px;
+                            height: 55px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             span{
-                                font-size: 22px;
+                                font-size: 27px;
                                 line-height: normal;
                             }
                         }
